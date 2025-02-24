@@ -15,9 +15,9 @@ const AchieveGreat = () => {
 
   return (
     <div className="bg-gray-100  mt-10 md:mt-0 flex justify-center items-center sm:p-10 md:py-10 
-    md:px-4 lg:p-12 xl:p-16">
+    md:px-4 lg:p-12 xl:px-24">
       <div className="mx-auto  rounded-md bg-white flex flex-col justify-center 
-      items-center shadow-md sm:w-full sm:p-6 lg:p-16 xl:p-24">
+      items-center shadow-md sm:w-full sm:p-6 lg:p-16">
         {/* Main Heading */}
         <div>
           <h1 className="text-2xl tracking-tight md:text-3xl md:tracking-normal px-3 
@@ -32,7 +32,7 @@ const AchieveGreat = () => {
 
         {/* Cards */}
         <div className="flex flex-col p-3 md:flex-row justify-center
-         gap-6 w-full mt-6 md:p-2 md:gap-5">
+         gap-6 w-full mt-6 md:p-2 lg:px-10 md:gap-5 md:mt-12">
 
           {/* left Cards Group */}
           <div className="flex flex-col items-center w-full md:w-4/6 space-y-3 lg:w-1/2 lg:space-y-5">
@@ -57,7 +57,7 @@ const AchieveGreat = () => {
 
               {/* achievements */}
               <div className="border-2 border-[#447EF7] rounded-lg p-2
-               w-2/3 max-w-[240px] relative sm:p-6 sm:max-w-[500px] xl:py-14 xl:w-full">
+               w-2/3 max-w-[240px] relative sm:p-6 sm:max-w-[500px] xl:py-8 xl:w-full">
                 <h3 className=" bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text font-semibold mb-3 sm:text-xl
                  sm:mb-2 md:text-xl xl:mb-6">
                   What Ambassadors Actually Do
@@ -92,8 +92,8 @@ const AchieveGreat = () => {
           </div>
 
           {/* right cards group */}
-          <div className="w-full mt-2 md:w-2/5 space-y-3 sm:space-y-5 md:mt-0 lg:w-1/2 xl:space-y-7">
-            <div className="border-2 border-[#447EF7] rounded-lg p-4 w-full relative sm:p-5 xl:py-7">
+          <div className="w-full mt-2 md:w-2/5 space-y-3 sm:space-y-5 md:mt-0 lg:w-1/3 xl:space-y-3">
+            <div className="border-2 border-[#447EF7] rounded-lg p-4 w-full relative sm:p-5 xl:py-5">
               <h3 className=" bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text text-lg font-semibold mb-2 sm:text-xl">
                 Everything You Need to Succeed{" "}
               </h3>
@@ -115,7 +115,7 @@ const AchieveGreat = () => {
             </div>
 
             <div className="bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white flex items-start justify-left rounded-lg p-4 
-            gap-3 sm:p-5 md:flex-col md:gap-2 xl:py-8">
+            gap-3 sm:p-5 md:flex-col md:gap-2 xl:py-5">
               <Image src={zoom} alt="Zoom-Icon"
                className="rounded-full w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10  xl:w-12 xl:h-12" />
               <h3 className="text-lg font-semibold sm:text-xl md:text-lg xl:text-xl">Trainings held on Zoom</h3>
