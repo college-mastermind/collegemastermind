@@ -20,7 +20,7 @@ const OurTeamPage = () => {
         <TextBarBlueWaveBg
           text={"It takes a village to get through admissions"}
           btnLink={CtaLink}
-          btnText={"Book Your Free Consultation"}
+          btnText={"Book Your Free Consultations"}
         />
       </div>
     </div>
