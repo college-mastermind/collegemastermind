@@ -21,7 +21,7 @@ const GoogleForm = () => {
           width="100%"
           height="1400"
           frameBorder="0"
-          className="w-full h-[900vh] sm:h-[800vh] xl:h-[680vh]"
+          className="w-full h-[1030vh] sm:h-[750vh] xl:h-[600vh]"
         >
           Loading…
         </iframe>

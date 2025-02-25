@@ -52,7 +52,6 @@ const SolidPlan = () => {
           {/* left Cards Group */}
           <div className="flex flex-col items-center w-full md:w-4/6 space-y-3 lg:w-2/3 lg:space-y-5">
             <div className="flex gap-2 sm:justify-evenly w-full h-fit  md:gap-5 lg:gap-3">
-
               {/* two boxes */}
               <div
                 className="flex-col 
@@ -65,7 +64,10 @@ const SolidPlan = () => {
                   <h1 className="text-4xl font-bold mb-1 md:text-4xl xl:text-5xl">
                     5
                   </h1>
-                  <h4 className="text-base md:text-lg xl:text-xl">SAT <br />Sessions</h4>
+                  <h4 className="text-base md:text-lg xl:text-xl">
+                    SAT <br />
+                    Sessions
+                  </h4>
                 </div>
                 <div className="bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white text-center rounded-lg py-7 md:py-8 xl:py-10">
                   <h1 className="text-2xl font-bold md:text-4xl">100%</h1>
@@ -108,13 +110,17 @@ const SolidPlan = () => {
               </div>
             </div>
 
-            <h2
-              className="text-lg shadow-sm shadow-[#447EF7]  bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text ring-2 
+            <div className="ring-2 ring-black w-full md:px-4 lg:px-5 xl:px-6">
+              <h2
+                className="text-lg shadow-sm shadow-[#447EF7]  bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text ring-2 
             w-full p-3 rounded-md  ring-[#447EF7] font-semibold 
             sm:text-center xl:text-2xl"
-            >
-              <span className="font-bold text-[#243DBC]">Before</span> & <span className="font-bold text-[#243DBC]">After</span> tests for results you can see!
-            </h2>
+              >
+                <span className="font-bold text-[#243DBC]">Before</span> &{" "}
+                <span className="font-bold text-[#243DBC]">After</span> tests
+                for results you can see!
+              </h2>
+            </div>
           </div>
 
           {/* right cards group */}
@@ -131,7 +137,9 @@ const SolidPlan = () => {
                       alt="Check-icon"
                       className="rounded-full w-3 h-3 mt-0.5 sm:mt-1.5 sm:w-4 sm:-4 lg:w-3 lg:h-3 lg:mt-1 xl:w-4 xl:h-4 xl:mt-1.5 "
                     />
-                    <p className="text-xs text-gray-600 sm:text-base lg:text-sm xl:text-lg">{text}</p>
+                    <p className="text-xs text-gray-600 sm:text-base lg:text-sm xl:text-lg">
+                      {text}
+                    </p>
                   </div>
                 ))}
               </div>
