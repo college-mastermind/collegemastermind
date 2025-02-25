@@ -7,6 +7,7 @@ import star from "@/app/assets/icons/star.svg";
 import cup from "@/app/assets/icons/cup.svg";
 import { motion } from "framer-motion";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
+import aarushPicture from "@/app/assets/aarushPicture.png"
 
 const testimonials = [
   {
@@ -14,7 +15,7 @@ const testimonials = [
     from: "950",
     till: "1370",
     duration: "6 weeks",
-    image: profilePic,
+    image: aarushPicture,
   },
   {
     name: "Sophia",

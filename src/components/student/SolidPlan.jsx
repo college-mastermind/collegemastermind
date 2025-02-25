@@ -110,7 +110,7 @@ const SolidPlan = () => {
               </div>
             </div>
 
-            <div className="ring-2 ring-black w-full md:px-4 lg:px-5 xl:px-6">
+            <div className="w-full md:px-4 lg:px-6 xl:px-8">
               <h2
                 className="text-lg shadow-sm shadow-[#447EF7]  bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text ring-2 
             w-full p-3 rounded-md  ring-[#447EF7] font-semibold 
@@ -124,12 +124,12 @@ const SolidPlan = () => {
           </div>
 
           {/* right cards group */}
-          <div className="w-full mt-2 md:w-2/5 space-y-3 md:mt-0 lg:w-1/3 xl:space-y-3">
-            <div className="border-2 border-[#447EF7] rounded-lg p-4 w-full relative xl:py-5">
+          <div className="w-full mt-2 md:w-2/5 space-y-3 md:mt-0 lg:w-1/3 lg:space-y-4">
+            <div className="border-2 border-[#447EF7] rounded-lg p-4 w-full relative lg:py-7">
               <h3 className=" bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text text-lg font-semibold mb-2 sm:text-xl">
                 Everything You Need to Succeed{" "}
               </h3>
-              <div className="space-y-2 xl:space-y-4 xl:my-5">
+              <div className="space-y-2 lg:space-y-6 lg:my-7">
                 {everything.map((text, index) => (
                   <div key={index} className="flex items-start gap-2">
                     <Image
