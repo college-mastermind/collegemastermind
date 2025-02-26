@@ -1,12 +1,13 @@
 import React from "react";
 import Image from "next/image";
+import leadershipBoy from "@/app/assets/leadershipBoy.png"
 
 const LeadershipSuccess = () => {
   return (
     <>
       <div>
         <div className="flex flex-col md:flex-row">
-          <div className="w-full xl:w-[1100px] flex flex-col items-center  justify-center xl:-mr-10 z-10 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0 py-12">
+          <div className="w-full xl:w-[1100px] 2xl:max-w-[1400px] flex flex-col items-center  justify-center xl:-mr-10 z-10 px-4 sm:px-6 md:px-8  xl:px-0 py-12">
             <div className="max-w-[730px] lg:pb-5">
               <div className="text-4xl sm:text-5xl lg:text-[58px] font-bold text-left text-[#5277FF] leading-tight pb-6 sm:pb-8 lg:pb-10">
                 Over 90% of our
@@ -30,10 +31,7 @@ const LeadershipSuccess = () => {
                     className="mt-0.5"
                   />
                   <div className="text-[#5D5D75] font-normal text-base sm:text-lg lg:text-[18px]">
-                    <span className="font-bold ">
-                    Ivy League
-                    </span> - 
-                    1570+
+                    <span className="font-bold ">Ivy League</span> - 1570+
                   </div>
                 </div>
                 <div className="flex space-x-4 items-start mt-4">
@@ -45,10 +43,7 @@ const LeadershipSuccess = () => {
                     className="mt-0.5"
                   />
                   <div className="text-[#5D5D75] font-normal text-base sm:text-lg lg:text-[18px]">
-                  <span className="font-bold">
-                    Top 20
-                    </span> - 
-                    1550+
+                    <span className="font-bold">Top 20</span> - 1550+
                   </div>
                 </div>
                 <div className="flex space-x-4 items-start mt-4">
@@ -60,10 +55,7 @@ const LeadershipSuccess = () => {
                     className="mt-0.5"
                   />
                   <div className="text-[#5D5D75] font-normal text-base sm:text-lg lg:text-[18px]">
-                  <span className="font-bold ">
-                    Top 30
-                    </span> - 
-                    1520+
+                    <span className="font-bold ">Top 30</span> - 1520+
                   </div>
                 </div>
                 <div className="flex space-x-4 items-start mt-4">
@@ -75,22 +67,19 @@ const LeadershipSuccess = () => {
                     className="mt-0.5"
                   />
                   <div className="text-[#5D5D75] font-normal text-base sm:text-lg lg:text-[18px]">
-                  <span className="font-bold">
-                    Top 50
-                    </span> - 
-                    1500+
+                    <span className="font-bold">Top 50</span> - 1500+
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="w-full xl:w-[650px] flex items-center justify-center py-12 xl:py-0">
+          <div className="w-full flex items-center justify-center lg:justify-end lg:items-end py-12 xl:py-0">
             <Image
-              src="/leadership_boy.svg"
+              src={leadershipBoy}
               width={800}
               height={800}
               alt="Picture of the boy"
-              className="z-0 max-w-[90%] lg:min-h-full"
+              className="max-w-[90%] md:min-h-full"
             />
           </div>
         </div>
