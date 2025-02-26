@@ -9,7 +9,7 @@ export default function ParentHero() {
     >
       <div className="flex flex-col pt-8 items-center justify-center text-center lg:pt-8">
         <h1 className="text-2xl px-4 sm:text-4xl sm:tracking-wide md:text-5xl lg:text-6xl font-bold mb-5 sm:mb-6 md:mb-8 lg:mb-12 text-white text-center ">
-        Unlock Your Child's Future <br />
+        Unlock Your Child&apos;s Future <br />
         with our Expert Guidance
         </h1>
         <p className="px-6  block text-[16px] sm:text-[19px] md:text-[22px] lg:text-[26px] lg:font-normal text-white text-center mb-8 sm:mb-12 md:mb-16 lg:mb-16 text-lg">
