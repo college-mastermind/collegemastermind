@@ -50,7 +50,7 @@ const VideoAndText = () => {
           </h3>
           <p className="text-gray-700 text-base lg:text-lg mt-2">
             Each college has a distinct personality—just having strong stats
-            won’t guarantee acceptance if you don’t mesh with that culture.
+            won&apos;t guarantee acceptance if you don&apos;t mesh with that culture.
           </p>
         </div>
       </div>

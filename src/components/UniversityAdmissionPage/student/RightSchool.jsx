@@ -82,7 +82,7 @@ const RightSchool = () => {
                   className=" bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text font-semibold mb-1.5 sm:text-xl
                  sm:mb-2 md:text-xl xl:mb-6 xl:text-2xl"
                 >
-                  What You’ll Get
+                  What You&apos;ll Get
                 </h3>
                 <div className="space-y-2 sm:my-3 md:my-4">
                   {ambassador.map((text, index) => (

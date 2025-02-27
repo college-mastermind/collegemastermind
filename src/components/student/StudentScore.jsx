@@ -18,8 +18,8 @@ const LeadershipSuccess = () => {
                 <span className="font-bold">
                   Let us show you how to get there!
                 </span>{" "}
-                A 1500+ doesn’t just look good, it opens doors at the most
-                competitive colleges, even if your GPA isn’t perfect.
+                A 1500+ doesn&apos;t just look good, it opens doors at the most
+                competitive colleges, even if your GPA isn&apos;t perfect.
               </div>
               <div className="mt-8 sm:mt-10">
                 <div className="flex space-x-4 items-start">

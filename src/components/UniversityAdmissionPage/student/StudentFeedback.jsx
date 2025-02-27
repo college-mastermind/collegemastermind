@@ -44,8 +44,8 @@ const StudentFeedback = () => {
 
       {/* Quote Text */}
       <p className="text-gray-700 text-sm md:text-base lg:text-2xl xl:text-3xl max-w-3xl">
-        Cornell was my dream school, but after College Mastermind’s university
-        selection process, I realized it wasn’t the best fit and dropped it to
+        Cornell was my dream school, but after College Mastermind&apos;s university
+        selection process, I realized it wasn&apos;t the best fit and dropped it to
         #5. I got rejected.
       </p>
 

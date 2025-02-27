@@ -68,7 +68,7 @@ const ChooseUniversities = () => {
                 </div>
               </div>
               <div className="text-lg mt-10 sm:text-xl font-bold lg:text-[24px] text-justify text-[#3F3F3F] leading-tight">
-                You'll find your best university by exploring places you haven't
+                You&apos;ll find your best university by exploring places you haven&apos;t
                 even considered.
               </div>
             </div>
