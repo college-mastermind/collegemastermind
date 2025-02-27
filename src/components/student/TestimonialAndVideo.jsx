@@ -19,7 +19,7 @@ const testimonials = [
   },
   {
     name: "Sophia",
-    from: "1100",
+    from: "1100", 
     till: "1450",
     duration: "8 weeks",
     image: profilePic,
@@ -55,7 +55,7 @@ const TestimonialAndVideo = () => {
   };
 
   return (
-    <div className="relative mt-7 w-full bg-white py-16 px-6 sm:px-12 md:px-16 flex flex-col md:flex-row items-center justify-between lg:justify-around  max-w-7xl mx-auto lg:px-20 xl:px-16">
+    <div className="relative mt-7 w-full bg-white py-16 xl:py-20 xl:my-20 px-6 sm:px-12 md:px-16 flex flex-col md:flex-row items-center justify-between lg:justify-around  max-w-7xl xl:max-w-screen-xl mx-auto lg:px-20 xl:px-14">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <Image

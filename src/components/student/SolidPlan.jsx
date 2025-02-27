@@ -51,7 +51,7 @@ const SolidPlan = () => {
         >
           {/* left Cards Group */}
           <div className="flex flex-col items-center w-full md:w-4/6 space-y-3 lg:w-2/3 lg:space-y-5">
-            <div className="flex gap-2 sm:justify-evenly w-full h-fit  md:gap-5 lg:gap-3">
+            <div className="flex gap-2 sm:justify-evenly w-full h-full  md:gap-5 lg:gap-3">
               {/* two boxes */}
               <div
                 className="flex-col 
@@ -110,11 +110,11 @@ const SolidPlan = () => {
               </div>
             </div>
 
-            <div className=" w-full md:px-3 lg:px-5 xl:px-0">
+            <div className=" w-full h-full md:px-3 lg:mx-5 xl:px-0">
               <h2
-                className="text-lg shadow-sm shadow-[#447EF7]  bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text ring-2 
-            w-full p-3 rounded-md  ring-[#447EF7] font-semibold 
-            sm:text-center xl:text-2xl"
+                className="text-lg my-auto  bg-gradient-to-r ring-2 ring-[#447EF7] shadow-sm shadow-[#447EF7] rounded-md from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text  
+            w-full p-3 h-full font-semibold 
+            sm:text-center xl:text-3xl xl:pt-10"
               >
                 <span className="font-bold text-[#243DBC]">Before</span> &{" "}
                 <span className="font-bold text-[#243DBC]">After</span> tests

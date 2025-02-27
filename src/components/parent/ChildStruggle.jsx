@@ -8,7 +8,7 @@ const ChildStruggle = () => {
     <>
       <div>
         <div className="flex flex-col md:flex-row">
-          <div className="w-full xl:w-[1100px] 2xl:max-w-[1400px] flex flex-col items-center  justify-center xl:-mr-10 z-10 px-4 sm:px-6 md:px-8  xl:px-0 py-12">
+          <div className="w-full xl:mx-auto xl:max-w-[1000px] 2xl:max-w-[1200px] flex flex-col items-center  justify-center xl:-mr-10 z-10 px-4 sm:px-6 md:px-8  xl:px-0 py-12">
             <div className="max-w-[730px] lg:pb-5">
               <div className="text-3xl flex-col sm:text-3xl lg:text-5xl font-bold text-left text-[#5277FF] pb-6 sm:pb-8 lg:pb-10">
                 <h2>Does Your Child Struggle</h2>
