@@ -15,7 +15,7 @@ export default function HeroSection() {
         <p className="px-6 max-w-80 leading-normal sm:max-w-full block text-[16px] sm:text-[19px] md:text-[22px] lg:text-[28px] lg:font-normal text-white text-center mb-8 sm:mb-12 text-lg">
         Get 2 Free Sessions to Build Your 
           <br /> 
-          Child's Perfect College List 
+          Child&apos;s Perfect College List 
         </p>
 
         <a
