@@ -13,12 +13,12 @@ const VideoAndText = () => {
   };
 
   return (
-    <div className="relative mt-7 md:mt-0 w-full h-full py-20 px-4 sm:px-6 md:px-10 lg:px-14 xl:px-20 flex flex-col items-center text-center max-w-7xl mx-auto">
+    <div className="relative mt-7 md:mt-0 w-full h-full py-20 px-4 sm:px-6  flex flex-col items-center text-center max-w-screen-xl mx-auto">
       {/* Video and Text Section */}
       <div className="mt-12 rounded-lg p-3 h-full sm:p-4 md:p-5 lg:p-14 xl:p-20 bg-white shadow-lg md:flex justify-center items-center md:gap-10 max-w-full mx-auto">
         {/* Video */}
         <motion.div
-          className="w-full h-60 md:w-1/2 flex justify-center ring-2 ring-[#447EF7] rounded-md relative overflow-hidden"
+          className="w-full h-60 md:w-1/2 max-w-md flex justify-center ring-2 ring-[#447EF7] rounded-md relative overflow-hidden"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

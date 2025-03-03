@@ -9,13 +9,13 @@ export default function HeroSection() {
     >
       <div className="flex flex-col pt-5 items-center justify-center text-center lg:pt-7">
         <h1 className="text-3xl px-1 sm:text-5xl sm:tracking-wide md:text-6xl lg:text-7xl font-bold mb-5 sm:mb-6 md:mb-8 lg:mb-12 text-white text-center ">
-          Your Dream School Is <br />
-          Within Reach
+          The Right Colleges <br />
+          More Opportunities
         </h1>
-        <p className="px-6 max-w-80 leading-normal sm:max-w-full block text-[16px] sm:text-[19px] md:text-[22px] lg:text-[28px] lg:font-normal text-white text-center mb-8 sm:mb-12 md:mb-16 lg:mb-16 text-lg">
-          Get 2 Free Sessions to Build Your Perfect College List
-          <br />
-          and Jump Start Your Path to a Top University
+        <p className="px-6 max-w-80 leading-normal sm:max-w-full block text-[16px] sm:text-[19px] md:text-[22px] lg:text-[28px] lg:font-normal text-white text-center mb-8 sm:mb-12 text-lg">
+        Get 2 Free Sessions to Build Your 
+          <br /> 
+          Child's Perfect College List 
         </p>
 
         <a

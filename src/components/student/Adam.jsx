@@ -9,7 +9,7 @@ const Adam = () => {
   return (
     <div className="relative mt-7 md:mt-0 w-full bg-white py-28 px-6 
     sm:px-12 md:px-8 flex flex-col md:flex-row items-center justify-between
-     max-w-8xl mx-auto lg:px-14 xl:px-16">
+     max-w-screen-xl mx-auto lg:px-14 xl:px-16">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <Image src={cup} alt="Cup" width={100} height={100} className="absolute top-5 left-14 opacity-50" />

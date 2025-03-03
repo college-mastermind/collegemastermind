@@ -12,7 +12,7 @@ export default function StudentHero() {
           Your First Step to <br />
           1500+ on the SAT
         </h1>
-        <p className="px-6  block text-[16px] sm:text-[19px] md:text-[22px] lg:text-[28px] lg:font-normal text-white text-center mb-8 sm:mb-12 md:mb-16 lg:mb-16 text-lg">
+        <p className="px-6  block text-[16px] leading-normal sm:text-[19px] md:text-[22px] lg:text-[28px] lg:font-normal text-white text-center mb-8 sm:mb-12 md:mb-16 lg:mb-16 text-lg">
           5 Free SAT Sessions to Jumpstart Your Path
           <br/>
           to 1500+

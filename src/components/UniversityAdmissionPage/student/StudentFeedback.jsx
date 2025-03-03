@@ -8,7 +8,7 @@ import aarushPicture from "@/app/assets/aarushPicture.png"
 
 const StudentFeedback = () => {
   return (
-    <div className="relative mt-7 md:mt-0 w-full h-full bg-white py-20 px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32 flex flex-col items-center text-center max-w-7xl mx-auto">
+    <div className="relative mt-7 md:mt-0 w-full h-full bg-white py-20 px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32 flex flex-col items-center text-center max-w-screen-xl mx-auto">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <Image

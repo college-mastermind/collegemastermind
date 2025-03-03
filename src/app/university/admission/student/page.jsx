@@ -9,11 +9,14 @@ import StudentForm from '@/components/UniversityAdmissionPage/student/StudentFor
 
 
 export default function page() {
+  const boldText = "Let us help you get in too!";
+  const plainText = "Acceptance rates are no barrier when you choose the right universities that align with your values and personality."
+  const lastText = "You'll find your best university by exploring places you haven't even considered."
   return (
     <div>
       <HeroSection />
-      <TopChoices />
-      <ChooseUniversities />
+      <TopChoices boldText={boldText} plainText={plainText}/>
+      <ChooseUniversities lastText={lastText}/>
       <RightSchool />
       <StudentFeedback />
       <StudentForm />

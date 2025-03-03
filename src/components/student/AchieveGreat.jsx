@@ -25,12 +25,12 @@ const AchieveGreat = () => {
 
   return (
     <div
-      className="bg-gray-100  mt-10 md:mt-0 flex justify-center items-center sm:p-10 md:py-10 
-    md:px-4 lg:p-12 xl:px-24"
+        className="sm:bg-gray-100  mt-10 md:mt-0 flex justify-center items-center sm:p-10 md:py-10 
+    md:px-4 lg:p-16 xl:px-28"
     >
       <div
         className="mx-auto  rounded-md bg-white flex flex-col justify-center 
-      items-center shadow-md sm:w-full sm:p-6 lg:p-16"
+      items-center shadow-md sm:w-full sm:p-4 lg:p-12 max-w-screen-xl"
       >
         {/* Main Heading */}
         <div>
@@ -85,7 +85,7 @@ const AchieveGreat = () => {
               {/* achievements */}
               <div
                 className="border-2 border-[#447EF7] rounded-lg p-2
-               w-2/3 max-w-[240px] relative sm:p-6 sm:max-w-[500px] xl:py-8 xl:w-full"
+               w-2/3 max-w-[240px] relative sm:p-4 sm:max-w-full md:py-6  xl:px-6 md:w-full"
               >
                 <h3
                   className=" bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text font-semibold mb-3 sm:text-xl
@@ -117,11 +117,11 @@ const AchieveGreat = () => {
               </div>
             </div>
 
-            <div className=" w-full h-full md:px-3 lg:mx-5 xl:px-0">
+            <div className=" w-full h-full">
               <h2
                 className="text-lg my-auto  bg-gradient-to-r ring-2 ring-[#447EF7] shadow-sm shadow-[#447EF7] rounded-md from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text  
             w-full p-3 h-full font-semibold 
-            sm:text-center xl:text-3xl xl:pt-10"
+            text-center lg:text-xl xl:text-2xl justify-center md:pt-7 lg:pt-7 xl:pt-3"
               >
                 Learn Skills that Successful Adults Use
               </h2>

@@ -8,7 +8,7 @@ import GoogleForm from '@/components/student/GoogleForm'
 
 export default function page() {
   return (
-    <div>
+    <div> 
       <StudentHero />
       <StudentScore />
       <SolidPlan />

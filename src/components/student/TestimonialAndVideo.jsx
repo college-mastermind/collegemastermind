@@ -39,7 +39,7 @@ const testimonials = [
     image: profilePic,
   }
 ];
-
+ 
 const TestimonialAndVideo = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { name, from, till, duration, image } = testimonials[currentIndex];
@@ -89,7 +89,7 @@ const TestimonialAndVideo = () => {
       </div>
 
       {/* Left Side: Testimonial */}
-      <div className="flex flex-col items-center md:items-start gap-4 w-full md:w-1/2 lg:pl-10 xl:pl-20">
+      <div className="flex flex-col items-center md:items-start xl:items-center gap-4 w-full md:w-1/2 lg:pl-10 xl:pl-0 ">
         <motion.div
           key={currentIndex}
           initial={{ opacity: 0, y: 20 }}
@@ -111,7 +111,7 @@ const TestimonialAndVideo = () => {
             </p>
           </div>
         </motion.div>
-        <div className="flex gap-2 mt-2 md:mt-4">
+        <div className="flex items-start xl:mr-32 gap-2 mt-2 md:mt-4">
           <button onClick={handlePrev} className="md:text-xl">
             <GoChevronLeft />
           </button>

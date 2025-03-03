@@ -3,17 +3,17 @@ import Image from "next/image";
 import zoom from "@/app/assets/zoom.png";
 import check from "@/app/assets/check.jpg";
 
-const RightSchool = () => {
+const ChildNeeds = () => {
   const ambassador = [
     "Diagnostic Test",
-    `<b>Session 1</b> -  A deep dive into your values, personality, and objectives.`,
-    `<b>Done For You</b> - A completely customized list of 25-30 reach, target, and safety universities.`,
+    `<b>Session 1</b> -  A deep dive into your child's values, personality, and your family's objectives.`,
+    `<b>Done For You</b> -  A completely customized list of 25-30 reach, target, and safety universities.`,
     `<b>Session 2</b> -  A advisor will review the entire list and teach you how to do proper university research.`
   ];
 
   const everything = [
     "A good fit increases your chances of acceptance at a top university",
-    "You can pick the colleges you want most and focus your efforts to make it happen",
+    "You can pick the colleges you will focus on and focus your efforts to make it happen",
     "The right list gives you leverage and options to negotiate merit scholarships",
   ];
 
@@ -33,13 +33,13 @@ const RightSchool = () => {
             className="text-2xl tracking-tight md:text-3xl md:tracking-normal px-3 
           font-bold  bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text lg:text-4xl"
           >
-            The Right Schools Give
+            To Achieve Anything Great,
           </h1>
           <h1
             className="text-2xl tracking-tight md:text-3xl md:tracking-normal pl-10 
           font-bold  bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text lg:text-4xl"
           >
-           You the Best Chances
+           You Need a Solid Plan!
           </h1>
         </div>
 
@@ -112,7 +112,7 @@ const RightSchool = () => {
               <h2
                 className="text-lg my-auto  bg-gradient-to-r ring-2 ring-[#447EF7] shadow-sm shadow-[#447EF7] rounded-md from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text  
             w-full p-3 h-full font-semibold 
-            sm:text-center lg:pt-6 lg:text-xl xl:text-2xl xl:pt-3"
+            sm:text-center lg:pt-10 lg:text-2xl xl:pt-6"
               >
                 Learn 
                 <span className="font-bold">{" "}YOUR{" "}</span> 
@@ -125,7 +125,7 @@ const RightSchool = () => {
           <div className="w-full mt-2 md:w-2/5 space-y-3 md:mt-0 lg:w-1/3 ">
             <div className="border-2 border-[#447EF7] rounded-lg p-4 w-full relative xl:p-6 ">
               <h3 className=" bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text text-lg font-semibold mb-2 sm:text-xl xl:mb-4">
-              Why Your List Matters
+              Everything Your Child Needs to Succeed
               </h3>
               <div className="space-y-2 lg:space-y-3 lg:my-4 xl:my-6 ">
                 {everything.map((text, index) => (
@@ -135,7 +135,7 @@ const RightSchool = () => {
                       alt="Check-icon"
                       className="rounded-full w-3 h-3 mt-0.5 sm:mt-1  lg:w-4 lg:h-4 lg:mt-1 "
                     />
-                    <p className="text-xs text-gray-600 sm:text-base lg:text-base xl:text-base">
+                    <p className="text-xs text-gray-600 sm:text-base lg:text-base">
                       {text}
                     </p>
                   </div>
@@ -163,4 +163,4 @@ const RightSchool = () => {
   );
 };
 
-export default RightSchool;
+export default ChildNeeds;

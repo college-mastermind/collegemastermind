@@ -26,7 +26,7 @@ const SolidPlan = () => {
     >
       <div
         className="mx-auto  rounded-md bg-white flex flex-col justify-center 
-      items-center shadow-md sm:w-full sm:p-4 lg:p-12"
+      items-center shadow-md sm:w-full sm:p-4 lg:p-12 max-w-screen-xl"
       >
         {/* Main Heading */}
         <div>
@@ -114,7 +114,7 @@ const SolidPlan = () => {
               <h2
                 className="text-lg my-auto  bg-gradient-to-r ring-2 ring-[#447EF7] shadow-sm shadow-[#447EF7] rounded-md from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text  
             w-full p-3 h-full font-semibold 
-            sm:text-center xl:text-3xl xl:pt-10"
+            sm:text-center xl:text-2xl xl:pt-10"
               >
                 <span className="font-bold text-[#243DBC]">Before</span> &{" "}
                 <span className="font-bold text-[#243DBC]">After</span> tests
