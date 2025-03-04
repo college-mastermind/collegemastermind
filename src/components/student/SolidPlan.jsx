@@ -58,7 +58,7 @@ const SolidPlan = () => {
               justify-between text-center py-0 w-1/3 max-w-40 xl:w-52 xl:py-0"
               >
                 <div
-                  className="bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white text-center rounded-lg mb-5 py-7
+                  className="bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white text-center rounded-xl mb-5 py-7
                  md:py-8 w-full md:mb-6 xl:py-10"
                 >
                   <h1 className="text-4xl font-bold mb-1 md:text-4xl xl:text-6xl">
@@ -69,15 +69,15 @@ const SolidPlan = () => {
                     Sessions
                   </h4>
                 </div>
-                <div className="bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white text-center rounded-lg py-7 md:py-8 xl:py-10">
-                  <h1 className="text-2xl font-bold md:text-4xl xl:text-5xl">100%</h1>
+                <div className="bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white text-center rounded-xl py-7 md:py-8 xl:py-10">
+                  <h1 className="text-2xl font-bold md:text-4xl">100%</h1>
                   <h4 className="text-base md:text-lg">Free</h4>
                 </div>
               </div>
 
               {/* achievements */}
               <div
-                className="border-2 border-[#447EF7] rounded-lg p-2
+                className="border-2 border-[#447EF7] rounded-xl p-2
                w-2/3 max-w-[240px] relative sm:p-4 sm:max-w-full md:py-6  xl:px-6 xl:w-full"
               >
                 <h3
@@ -112,7 +112,7 @@ const SolidPlan = () => {
 
             <div className=" w-full h-full md:px-3 lg:mx-5 xl:px-0">
               <h2
-                className="text-lg my-auto  bg-gradient-to-r ring-2 ring-[#447EF7] shadow-sm shadow-[#447EF7] rounded-md from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text  
+                className="text-lg my-auto  bg-gradient-to-r ring-2 ring-[#447EF7] shadow-sm shadow-[#447EF7] rounded-xl from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text  
             w-full p-3 h-full font-semibold 
             sm:text-center xl:text-2xl xl:pt-10"
               >
@@ -125,7 +125,7 @@ const SolidPlan = () => {
 
           {/* right cards group */}
           <div className="w-full mt-2 md:w-2/5 space-y-3 md:mt-0 lg:w-1/3 ">
-            <div className="border-2 border-[#447EF7] rounded-lg p-4 w-full relative xl:p-6 ">
+            <div className="border-2 border-[#447EF7] rounded-xl p-4 w-full relative xl:p-6 ">
               <h3 className=" bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text text-lg font-semibold mb-2 sm:text-xl xl:mb-4">
                 Everything You Need to Succeed{" "}
               </h3>
@@ -146,7 +146,7 @@ const SolidPlan = () => {
             </div>
 
             <div
-              className="bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white flex items-start justify-left rounded-lg p-4 
+              className="bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white flex items-start justify-left rounded-xl p-4 
             gap-3 sm:p-5 md:flex-col md:gap-2 xl:py-5"
             >
               <Image

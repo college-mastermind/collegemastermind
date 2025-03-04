@@ -63,12 +63,12 @@ const AchieveGreat = () => {
               >
                 <div
                   className=" bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white text-sm px-3 py-3 mb-5 
-                rounded-md font-semibold md:text-lg md:mb-6 xl:text-xl xl:px-4 xl:py-4"
+                rounded-xl font-semibold md:text-lg md:mb-6 xl:text-xl xl:px-4 xl:py-4"
                 >
                   Win-Win
                 </div>
                 <div
-                  className="bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white text-center rounded-lg mb-5 py-7
+                  className="bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white text-center rounded-xl mb-5 py-7
                  md:py-8 w-full md:mb-6 xl:py-10"
                 >
                   <h1 className="text-2xl font-bold mb-1 md:text-4xl xl:text-5xl">
@@ -76,7 +76,7 @@ const AchieveGreat = () => {
                   </h1>
                   <h4 className="text-sm md:text-lg xl:text-xl">Money</h4>
                 </div>
-                <div className="bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white text-center rounded-lg py-7 md:py-8 xl:py-10">
+                <div className="bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white text-center rounded-xl py-7 md:py-8 xl:py-10">
                   <h1 className="text-2xl font-bold md:text-4xl">Get</h1>
                   <h4 className="text-sm md:text-lg">Accepted</h4>
                 </div>
@@ -84,7 +84,7 @@ const AchieveGreat = () => {
 
               {/* achievements */}
               <div
-                className="border-2 border-[#447EF7] rounded-lg p-2
+                className="border-2 border-[#447EF7] rounded-xl p-2
                w-2/3 max-w-[240px] relative sm:p-4 sm:max-w-full md:py-6  xl:px-6 md:w-full"
               >
                 <h3
@@ -119,9 +119,9 @@ const AchieveGreat = () => {
 
             <div className=" w-full h-full">
               <h2
-                className="text-lg my-auto  bg-gradient-to-r ring-2 ring-[#447EF7] shadow-sm shadow-[#447EF7] rounded-md from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text  
-            w-full p-3 h-full font-semibold 
-            text-center lg:text-xl xl:text-2xl justify-center md:pt-7 lg:pt-7 xl:pt-3"
+                className="text-lg my-auto  bg-gradient-to-r ring-2 ring-[#447EF7] shadow-sm shadow-[#447EF7] rounded-xl from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text  
+            w-full p-3 h-full font-bold 
+            text-center lg:text-xl xl:text-2xl justify-center md:pt-7 lg:pt-10 xl:pt-3"
               >
                 Learn Skills that Successful Adults Use
               </h2>
@@ -130,7 +130,7 @@ const AchieveGreat = () => {
 
           {/* right cards group */}
           <div className="w-full mt-2 md:w-2/5 space-y-3 sm:space-y-5 md:mt-0 lg:w-1/3 xl:space-y-3">
-            <div className="border-2 border-[#447EF7] rounded-lg p-4 w-full relative sm:p-5 xl:py-5">
+            <div className="border-2 border-[#447EF7] rounded-xl p-4 w-full relative sm:p-5 xl:py-5">
               <h3 className=" bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text text-lg font-semibold mb-2 sm:text-xl">
                 Everything You Need to Succeed{" "}
               </h3>
@@ -149,7 +149,7 @@ const AchieveGreat = () => {
             </div>
 
             <div
-              className="bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white flex items-start justify-left rounded-lg p-4 
+              className="bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white flex items-start justify-left rounded-xl p-4 
             gap-3 sm:p-5 md:flex-col md:gap-2 xl:py-5"
             >
               <Image
