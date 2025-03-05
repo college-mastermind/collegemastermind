@@ -10,7 +10,7 @@ const TopChoices = ({boldText, plainText}) => {
 
           <div className="w-full xl:mx-auto xl:max-w-[1000px] 2xl:max-w-[1200px]  flex flex-col items-center  justify-center xl:items-start z-10 px-4 sm:px-6 md:px-8  xl:px-0 py-12">
             <div className="max-w-[730px] lg:pb-5">
-              <div className="text-4xl sm:text-5xl lg:text-[58px] 2xl:text-7xl font-bold text-left text-[#5277FF] leading-tight pb-6 sm:pb-8 lg:pb-10 xl:text-nowrap">
+              <div className="text-4xl lg:text-5xl md:text-nowrap font-bold text-left text-[#5277FF] leading-tight pb-6 sm:pb-8 lg:pb-10 xl:text-nowrap">
                 96% of Our Students Get into <br />
                 One of Their Top 3 Choices
               </div>
@@ -65,7 +65,7 @@ const TopChoices = ({boldText, plainText}) => {
               width={800}
               height={800}
               alt="Picture of the boy"
-              className="max-w-[90%] md:min-h-full"
+              className="max-w-full max-h-full lg:max-w-screen-xs pt-6 xl:pt-14"
             />
           </div>
         </div>

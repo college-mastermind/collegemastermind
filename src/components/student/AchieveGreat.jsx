@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import zoom from "@/app/assets/zoom.png";
-import check from "@/app/assets/check.jpg";
+import check from "@/app/assets/check.svg";
 
 const AchieveGreat = () => {
   const ambassador = [
@@ -25,7 +25,7 @@ const AchieveGreat = () => {
 
   return (
     <div
-        className="sm:bg-gray-100  mt-10 md:mt-0 flex justify-center items-center sm:p-10 md:py-10 
+        className="sm:bg-[#F0F9FE]  mt-10 md:mt-0 flex justify-center items-center sm:p-10 md:py-10 
     md:px-4 lg:p-16 xl:px-28"
     >
       <div
@@ -59,7 +59,7 @@ const AchieveGreat = () => {
               {/* three boxes */}
               <div
                 className="flex-col 
-              justify-between text-center py-3 w-1/3 max-w-36 xl:w-52 xl:py-0"
+              justify-between text-center py-3 w-1/3 max-w-36 xl:max-w-72 xl:py-0"
               >
                 <div
                   className=" bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white text-sm px-3 py-3 mb-5 
@@ -102,7 +102,7 @@ const AchieveGreat = () => {
                       <Image
                         src={check}
                         alt="Check-icon"
-                        className="rounded-full w-3 h-3 mt-1 sm:mt-1.5 sm:w-4 sm:h-4"
+                        className="rounded-full w-3 h-3 mt-1 sm:mt-1.5 sm:w-4 sm:h-4 md:mt-1"
                       />
                       <p className="text-sm text-gray-600 sm:text-lg md:text-base">
                         {text}
@@ -140,7 +140,7 @@ const AchieveGreat = () => {
                     <Image
                       src={check}
                       alt="Check-icon"
-                      className="rounded-full w-3 h-3 mt-0.5 sm:mt-1.5 sm:w-4 sm:-4 "
+                      className="rounded-full w-3 h-3 mt-0.5 sm:mt-1.5 sm:w-4 sm:h-4 md:mt-1"
                     />
                     <p className="text-xs text-gray-600 sm:text-base">{text}</p>
                   </div>

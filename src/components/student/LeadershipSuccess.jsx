@@ -69,7 +69,7 @@ const LeadershipSuccess = () => {
             width={800}
             height={800}
             alt="Picture of the boy"
-            className="max-w-[90%] md:min-h-full"
+            className="max-w-full max-h-full lg:max-w-screen-ss"
             />
             </div>
       </div>

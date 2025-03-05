@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import zoom from "@/app/assets/zoom.png";
-import check from "@/app/assets/check.jpg";
+import check from "@/app/assets/check.svg";
 
 const SolidPlan = () => {
   const ambassador = [
@@ -21,7 +21,7 @@ const SolidPlan = () => {
 
   return (
     <div
-      className="sm:bg-gray-100  mt-10 md:mt-0 flex justify-center items-center sm:p-10 md:py-10 
+      className="sm:bg-[#F0F9FE]  mt-10 md:mt-0 flex justify-center items-center sm:p-10 md:py-10 
     md:px-4 lg:p-16 xl:px-28"
     >
       <div
@@ -47,19 +47,19 @@ const SolidPlan = () => {
         {/* Cards */}
         <div
           className="flex flex-col max-w-[400px] sm:max-w-full lg:max-w-[1102px] p-4 md:flex-row justify-center
-         gap-6 w-full mt-6 md:p-2 lg:px-5 md:gap-5 md:mt-12 lg:gap-1 xl:justify-evenly "
+         gap-6 w-full mt-6 md:p-2 lg:px-5 md:gap-5 md:mt-12 lg:gap-1 xl:gap-3 xl:justify-evenly "
         >
           {/* left Cards Group */}
           <div className="flex flex-col items-center w-full md:w-4/6 space-y-3 lg:w-2/3 lg:space-y-5">
             <div className="flex gap-2 sm:justify-evenly w-full h-full  md:gap-5 lg:gap-3">
               {/* two boxes */}
               <div
-                className="flex-col 
-              justify-between text-center py-0 w-1/3 max-w-40 xl:w-52 xl:py-0"
+                className="flex-col  
+             justify-between gap-5 text-center py-0 w-1/3 max-w-40 xl:max-w-72 xl:py-0"
               >
                 <div
-                  className="bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white text-center rounded-xl mb-5 py-7
-                 md:py-8 w-full md:mb-6 xl:py-10"
+                  className="bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white flex-col justify-center items-center text-center rounded-xl 
+            w-full h-40 xl:h-48  shadow-inner-[0px_8px_8px_-4px_rgba(0,0,0,0.03)] shadow-[0px_20px_24px_-4px_rgba(0,0,0,0.08) pt-10"
                 >
                   <h1 className="text-4xl font-bold mb-1 md:text-4xl xl:text-6xl">
                     5
@@ -69,7 +69,7 @@ const SolidPlan = () => {
                     Sessions
                   </h4>
                 </div>
-                <div className="bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white text-center rounded-xl py-7 md:py-8 xl:py-10">
+                <div className="bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white text-center mt-6 rounded-xl w-full h-40 xl:h-48 pt-12 xl:pt-16 flex-col justify-center items-center">
                   <h1 className="text-2xl font-bold md:text-4xl">100%</h1>
                   <h4 className="text-base md:text-lg">Free</h4>
                 </div>
@@ -95,7 +95,7 @@ const SolidPlan = () => {
                       <Image
                         src={check}
                         alt="Check-icon"
-                        className="rounded-full w-3 h-3 mt-0.5 sm:mt-1 sm:w-4 sm:h-4 md:mt-1 md:w-3 md:h-3 xl:w-4 xl:h-4 xl:mt-2"
+                        className="rounded-full w-3 h-3 mt-0.5 sm:mt-1 sm:w-4 sm:h-4 md:mt-1 md:w-3 md:h-3 xl:w-4 xl:h-4 xl:mt-1.5"
                       />
                       <p className="text-xs text-gray-600 sm:text-base md:text-base xl:text-lg">
                         {text}
@@ -110,7 +110,7 @@ const SolidPlan = () => {
               </div>
             </div>
 
-            <div className=" w-full h-full md:px-3 lg:mx-5 xl:px-0">
+            <div className=" w-full h-full md:px-4 lg:px-5 xl:px-0">
               <h2
                 className="text-lg my-auto  bg-gradient-to-r ring-2 ring-[#447EF7] shadow-sm shadow-[#447EF7] rounded-xl from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text  
             w-full p-3 h-full font-semibold 
@@ -152,7 +152,7 @@ const SolidPlan = () => {
               <Image
                 src={zoom}
                 alt="Zoom-Icon"
-                className="rounded-full w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10  xl:w-12 xl:h-12"
+                className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10  xl:w-12 xl:h-12"
               />
               <h3 className="text-lg font-semibold sm:text-xl md:text-lg xl:text-xl">
                 Trainings held on Zoom

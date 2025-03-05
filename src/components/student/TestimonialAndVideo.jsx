@@ -1,13 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import Image from "next/image";
 import profilePic from "@/app/assets/adam.png";
 import star from "@/app/assets/icons/star.svg";
 import cup from "@/app/assets/icons/cup.svg";
 import { motion } from "framer-motion";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
-import aarushPicture from "@/app/assets/aarushPicture.png"
+import aarushPicture from "@/app/assets/aarushPicture.png";
+const AarushTestimonialVideo = React.lazy(() => import("./AarushTestimonialVideo"));
 
 const testimonials = [
   {
@@ -19,7 +20,7 @@ const testimonials = [
   },
   {
     name: "Sophia",
-    from: "1100", 
+    from: "1100",
     till: "1450",
     duration: "8 weeks",
     image: profilePic,
@@ -37,12 +38,17 @@ const testimonials = [
     till: "1450",
     duration: "8 weeks",
     image: profilePic,
-  }
+  },
 ];
- 
+
 const TestimonialAndVideo = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { name, from, till, duration, image } = testimonials[currentIndex];
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+  const handlePlayButtonClick = () => {
+    setIsVideoLoaded(true); // Trigger lazy loading of the video
+  };
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
@@ -99,19 +105,26 @@ const TestimonialAndVideo = () => {
           className="flex flex-col items-center md:items-start gap-4"
         >
           <div className="rounded-full overflow-hidden w-28 h-28 sm:w-40 sm:h-40 lg:w-44 lg:h-44 xl:w-48 xl:h-48">
-            <Image src={image} alt={name} className="object-cover w-full h-full" />
+            <Image
+              src={image}
+              alt={name}
+              className="object-cover w-full h-full"
+            />
           </div>
           <div className="transition-all ease-in-out md:pl-2">
-            <h2 className="text-3xl font-bold text-blue-700 sm:text-4xl lg:mb-2">{name}</h2>
+            <h2 className="text-3xl font-bold text-blue-700 sm:text-4xl lg:mb-2">
+              {name}
+            </h2>
             <p className="text-gray-400 text-xl sm:text-2xl lg:text-5xl">
               <span className="font-extrabold text-gray-600">{from} </span>
               to <span className="font-extrabold text-[#447EF7]">{till}</span>
               <br />
-              in <span className="font-extrabold text-blue-700">{duration}</span>
+              in{" "}
+              <span className="font-extrabold text-blue-700">{duration}</span>
             </p>
           </div>
         </motion.div>
-        <div className="flex items-start xl:mr-32 gap-2 mt-2 md:mt-4">
+        <div className="hidden items-start xl:mr-32 gap-2 mt-2 md:mt-4">
           <button onClick={handlePrev} className="md:text-xl">
             <GoChevronLeft />
           </button>
@@ -131,21 +144,30 @@ const TestimonialAndVideo = () => {
         </div>
       </div>
 
-       {/* Right Side: Videos */}
-       <div className="flex flex-col items-center md:items-start lg:items-center gap-6 w-full md:w-1/2 mt-8 md:mt-0">
-        {[1, 2].map((_, index) => (
-          <motion.div
-            key={index}
-            className="w-full max-w-xs md:max-w-sm h-36 md:h-40 lg:h-44 bg-gray-300 flex items-center justify-center rounded-lg cursor-pointer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <div className="bg-[#243DBC] text-gray-100 flex justify-center text-center rounded-full text-2xl px-3 py-1.5">
-              <div className="rounded-full">▶</div>
+      {/* Right Side: Videos */}
+      {/* Video */}
+      <motion.div
+        className="w-full h-60 md:w-1/2 max-w-md flex justify-center ring-2 ring-[#447EF7] rounded-md relative overflow-hidden"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <div className="relative w-full h-full">
+          {isVideoLoaded ? (
+            <Suspense fallback={<div>Loading video...</div>}>
+              <AarushTestimonialVideo />
+            </Suspense>
+          ) : (
+            <div className="w-full h-full bg-gray-300 flex items-center justify-center">
+              <button
+                className="bg-[#447EF7] ring-2 ring-white text-gray-100 flex justify-center items-center rounded-full w-12 h-12 text-2xl"
+                onClick={handlePlayButtonClick}
+              >
+                ▶
+              </button>
             </div>
-          </motion.div>
-        ))}
-      </div>
+          )}
+        </div>
+      </motion.div>
     </div>
   );
 };

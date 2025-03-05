@@ -10,7 +10,7 @@ const VideoAndText = () => {
 
   const handlePlayButtonClick = () => {
     setIsVideoLoaded(true); // Trigger lazy loading of the video
-  };
+  }; 
 
   return (
     <div className="relative mt-7 md:mt-0 w-full h-full py-20 px-4 sm:px-6  flex flex-col items-center text-center max-w-screen-xl mx-auto">
