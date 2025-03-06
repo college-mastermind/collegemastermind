@@ -16,7 +16,7 @@ export default function Hero() {
         </p>
 
         <a
-          href="https://collegemastermind-ambassador.pushlapgrowth.com/"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfzizr7bT6rYy-X5KkEW6kCLnr51gAU3GydYeXlfppKsGnBWw/viewform"
           target='_blank'
           className="bg-white text-blue-500 font-semibold border
            border-blue-500 rounded-lg transition duration-300 ease-in-out 
