@@ -72,7 +72,7 @@ const SatFeedbackWithRange = () => {
         I chose
         <span className="font-extrabold bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text">
           {" "}
-          College Mastermind's{" "}
+          College Mastermind&apos;s{" "}
         </span>
         Full Test Prep program right off the bat. I knew I needed the
         test-taking skills because I wanted to have the best score possible for
@@ -81,7 +81,7 @@ const SatFeedbackWithRange = () => {
 
       {/* Quote Text */}
       <p className="text-gray-700 text-sm md:text-base lg:text-2xl xl:text-3xl max-w-5xl mt-5">
-        College Mastermind's tutors helped me boil down the SAT to a science
+        College Mastermind&apos;s tutors helped me boil down the SAT to a science
         (especially the English section!) and enabled me to achieve a score that
         I am proud of. My score now accurately reflects my academic abilities
         and is competitive among top universities.

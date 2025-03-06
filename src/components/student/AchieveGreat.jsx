@@ -113,7 +113,7 @@ const AchieveGreat = () => {
                 <h5 className="text-xs mt-3 sm:text-sm  xl:mt-6 bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white text-center rounded-lg p-2 md:p-3">
                   Most students talk a big game about leadership, but real
                   leaders take action. This is your chance to step up, build
-                  something real, and prove through results that you're not just
+                  something real, and prove through results that you&apos;re not just
                   another student with big talk or big “dreams” and no
                   follow-through.
                 </h5>
