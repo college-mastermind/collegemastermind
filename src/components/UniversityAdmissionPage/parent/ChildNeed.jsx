@@ -3,9 +3,8 @@ import Image from "next/image";
 import zoom from "@/app/assets/zoom.png";
 import check from "@/app/assets/check.svg";
 
-const ChildNeeds = () => {
+const ChildNeeds = () => { 
   const ambassador = [
-    "Diagnostic Test",
     `<b>Session 1</b> -  A deep dive into your child's values, personality, and your family's objectives.`,
     `<b>Done For You</b> -  A completely customized list of 25-30 reach, target, and safety universities.`,
     `<b>Session 2</b> -  A advisor will review the entire list and teach you how to do proper university research.`
@@ -31,13 +30,13 @@ const ChildNeeds = () => {
         <div>
           <h1
             className="text-2xl tracking-tight md:text-3xl md:tracking-normal px-3 
-          font-bold  bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text lg:text-4xl"
+          font-bold  bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text lg:text-4xl"
           >
             To Achieve Anything Great,
           </h1>
           <h1
             className="text-2xl tracking-tight md:text-3xl md:tracking-normal pl-10 
-          font-bold  bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text lg:text-4xl"
+          font-bold  bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text lg:text-4xl"
           >
            You Need a Solid Plan!
           </h1>
@@ -60,7 +59,7 @@ const ChildNeeds = () => {
                   className="bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white flex-col justify-center items-center text-center rounded-xl 
             w-full h-40 xl:h-48  shadow-inner-[0px_8px_8px_-4px_rgba(0,0,0,0.03)] shadow-[0px_20px_24px_-4px_rgba(0,0,0,0.08) pt-10"
                 >
-                  <h1 className="text-4xl font-bold mb-1 md:text-4xl xl:text-6xl">
+                  <h1 className="text-4xl font-bold mb-1 md:text-5xl xl:text-6xl">
                     2
                   </h1>
                   <h4 className="text-base md:text-lg xl:text-xl">
@@ -76,15 +75,15 @@ const ChildNeeds = () => {
               {/* achievements */}
               <div
                 className="border-2 border-[#447EF7] rounded-xl p-2
-               w-2/3 max-w-[240px] relative sm:p-4 sm:max-w-full md:py-6  xl:px-6 xl:w-full"
+               w-2/3 max-w-[240px] relative sm:p-6 sm:max-w-full md:py-6  xl:px-6 xl:w-full"
               >
                 <h3
                   className=" bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text font-semibold mb-1.5 sm:text-xl
-                 sm:mb-2 md:text-xl xl:mb-6 xl:text-2xl"
+                 sm:mb-4 md:text-2xl xl:mb-6 "
                 >
                   What You&apos;ll Get
                 </h3>
-                <div className="space-y-2 sm:my-3 md:my-4">
+                <div className="space-y-2 sm:my-3 md:my-6">
                   {ambassador.map((text, index) => (
                     <div
                       key={index}
@@ -93,25 +92,25 @@ const ChildNeeds = () => {
                       <Image
                         src={check}
                         alt="Check-icon"
-                        className="rounded-full w-3 h-3 mt-0.5 sm:mt-1 sm:w-4 sm:h-4 md:mt-1 md:w-3 md:h-3 xl:w-4 xl:h-4 xl:mt-2"
+                        className="rounded-full w-3 h-3 mt-2.5 sm:mt-3 sm:w-4 sm:h-4 md:mt-3"
                       />
-                      <p className="text-xs text-gray-600 sm:text-base md:text-base xl:text-lg" dangerouslySetInnerHTML={{__html: text}}>
+                      <p className="text-xs text-gray-600 sm:text-base md:text-base xl:text-lg p-2" dangerouslySetInnerHTML={{__html: text}}>
                        
                       </p>
                     </div>
                   ))}
                 </div>
-                <h5 className="text-xs mt-1.5 font-semibold sm:text-sm sm:mt-2 xl:mt-6 xl:text-lg">
+                {/* <h5 className="text-xs mt-1.5 font-semibold sm:text-sm sm:mt-2 xl:mt-6 xl:text-lg">
                   See your progress in real time, and follow our roadmap for
                   hitting 1500+ on the SAT
-                </h5>
+                </h5> */}
               </div>
             </div>
 
             <div className=" w-full h-full md:px-3 lg:px-5 xl:px-0">
               <h2
                 className="text-lg my-auto  bg-gradient-to-r ring-2 ring-[#447EF7] shadow-sm shadow-[#447EF7] rounded-xl from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text  
-            w-full p-3 h-full font-semibold 
+            w-full p-3 h-full font-black 
             sm:text-center lg:pt-10 lg:text-2xl xl:pt-6"
               >
                 Learn 

@@ -3,6 +3,7 @@ import Hero from "@/components/student/Hero";
 import AchieveGreat from '@/components/student/AchieveGreat';
 import Adam from '@/components/student/Adam';
 import LeadershipSuccess from '@/components/student/LeadershipSuccess';
+import SatFeedbackWithRange from '@/components/student/SatFeedbackWithRange';
 
 
 export default function Page() {
@@ -11,7 +12,7 @@ export default function Page() {
       <Hero />
       <LeadershipSuccess />
       <AchieveGreat/>
-      <Adam />
+      <Adam /> 
     </div>
   );
 } 

@@ -25,7 +25,7 @@ const AchieveGreat = () => {
 
   return (
     <div
-        className="sm:bg-[#F0F9FE]  mt-10 md:mt-0 flex justify-center items-center sm:p-10 md:py-10 
+      className="sm:bg-[#F0F9FE]  mt-10 md:mt-0 flex justify-center items-center sm:p-10 md:py-10 
     md:px-4 lg:p-16 xl:px-28"
     >
       <div
@@ -36,13 +36,13 @@ const AchieveGreat = () => {
         <div>
           <h1
             className="text-2xl tracking-tight md:text-3xl md:tracking-normal px-3 
-          font-bold  bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text lg:text-4xl"
+          font-bold  bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text lg:text-4xl"
           >
             To Achieve Anything Great,
           </h1>
           <h1
             className="text-2xl tracking-tight md:text-3xl md:tracking-normal pl-10 
-          font-bold  bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text lg:text-4xl"
+          font-bold  bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text lg:text-4xl"
           >
             You Need a Solid Team!
           </h1>
@@ -110,9 +110,12 @@ const AchieveGreat = () => {
                     </div>
                   ))}
                 </div>
-                <h5 className="text-xs mt-3 font-semibold sm:text-sm sm:mt-2 xl:mt-6">
-                  See your progress in real time, and follow a proven roadmap
-                  for hitting 1500+ overall
+                <h5 className="text-xs mt-3 sm:text-sm  xl:mt-6 bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-white text-center rounded-lg p-2 md:p-3">
+                  Most students talk a big game about leadership, but real
+                  leaders take action. This is your chance to step up, build
+                  something real, and prove through results that you're not just
+                  another student with big talk or big “dreams” and no
+                  follow-through.
                 </h5>
               </div>
             </div>
@@ -120,8 +123,8 @@ const AchieveGreat = () => {
             <div className=" w-full h-full">
               <h2
                 className="text-lg my-auto  bg-gradient-to-r ring-2 ring-[#447EF7] shadow-sm shadow-[#447EF7] rounded-xl from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text  
-            w-full p-3 h-full font-bold 
-            text-center lg:text-xl xl:text-2xl justify-center md:pt-7 lg:pt-10 xl:pt-3"
+            w-full p-3 h-full font-black 
+            text-center lg:text-xl xl:text-2xl justify-center md:pt-5 xl:pt-3"
               >
                 Learn Skills that Successful Adults Use
               </h2>

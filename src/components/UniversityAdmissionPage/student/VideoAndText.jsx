@@ -7,7 +7,7 @@ const LazyVideo = React.lazy(() => import("./LazyVideo"));
 
 const VideoAndText = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-
+ 
   const handlePlayButtonClick = () => {
     setIsVideoLoaded(true); // Trigger lazy loading of the video
   }; 
@@ -41,14 +41,14 @@ const VideoAndText = () => {
         </motion.div>
 
         {/* Text Content */}
-        <div className="mt-6 md:mt-0 md:ml-6 text-left md:w-1/2">
+        <div className="mt-6 md:mt-0 md:ml-6 text-left md:w-1/2 sm:pr-3">
           <p className="text-[#243DBC] text-sm md:text-lg font-semibold">
             • Watch our video to learn more
           </p>
           <h3 className="text-[#447EF7] text-xl md:text-2xl lg:text-4xl xl:text-5xl font-bold mt-2">
             Choose the Right School & Increase Your Chances of Acceptance
           </h3>
-          <p className="text-gray-700 text-base lg:text-lg mt-2">
+          <p className="text-gray-800 text-base font-medium lg:text-lg mt-2 max-w-lg">
             Each college has a distinct personality—just having strong stats
             won&apos;t guarantee acceptance if you don&apos;t mesh with that culture.
           </p>

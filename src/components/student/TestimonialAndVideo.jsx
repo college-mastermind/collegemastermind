@@ -116,7 +116,7 @@ const TestimonialAndVideo = () => {
               {name}
             </h2>
             <p className="text-gray-400 text-xl sm:text-2xl lg:text-5xl">
-              <span className="font-extrabold text-gray-600">{from} </span>
+              <span className="font-extrabold text-gray-400">{from} </span>
               to <span className="font-extrabold text-[#447EF7]">{till}</span>
               <br />
               in{" "}
@@ -147,7 +147,7 @@ const TestimonialAndVideo = () => {
       {/* Right Side: Videos */}
       {/* Video */}
       <motion.div
-        className="w-full h-60 md:w-1/2 max-w-md flex justify-center ring-2 ring-[#447EF7] rounded-md relative overflow-hidden"
+        className="w-full h-60 mt-14 md:mt-0 md:w-1/2 max-w-md flex justify-center ring-2 ring-[#447EF7] rounded-md relative overflow-hidden"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >

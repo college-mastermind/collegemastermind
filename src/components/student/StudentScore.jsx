@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import leadershipBoy from "@/app/assets/leadershipBoy.png"
 
-const LeadershipSuccess = () => {
+const StudentScore = ({boldText}) => {
   return (
     <>
       <div>
@@ -16,7 +16,7 @@ const LeadershipSuccess = () => {
               </div>
               <div className="text-lg sm:text-xl lg:text-[24px] font-normal  text-[#3F3F3F]">
                 <span className="font-bold">
-                  Let us show you how to get there!
+                 {boldText}
                 </span>{" "}
                 A 1500+ doesn&apos;t just look good, it opens doors at the most
                 competitive colleges, even if your GPA isn&apos;t perfect.
@@ -88,4 +88,4 @@ const LeadershipSuccess = () => {
   );
 };
 
-export default LeadershipSuccess;
+export default StudentScore;

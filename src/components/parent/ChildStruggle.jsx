@@ -4,31 +4,25 @@ import satGirl from "@/app/assets/satGirl.png";
 import satBgCircle from "@/app/assets/satBgCircle.png";
 import crossCheck from "@/app/assets/crossCheck.svg";
 
-const ChildStruggle = () => {
+const ChildStruggle = ({Heading1,Heading2,plainText,pointText}) => {
+
   return (
     <>
       <div>
-        <div className="flex flex-col mt-24  w-full md:flex-row-reverse lg:px-14 xl:px-0 xl:gap-20 max-w-fit mx-auto">
+        <div className="flex flex-col mt-20  w-full md:flex-row-reverse lg:px-14 xl:px-0 xl:gap-20 max-w-fit mx-auto">
           <div className="w-full xl:mx-auto xl:max-w-[1000px] 2xl:max-w-[1200px] flex flex-col items-center  justify-center xl:-mr-10 z-10 px-4 sm:px-6 md:px-8  xl:px-0 py-12">
             <div className="max-w-[730px] lg:pb-5">
               <div className="text-3xl flex-col sm:text-3xl md:text-nowrap lg:text-5xl font-bold text-left text-[#5277FF] pb-6 sm:pb-8 lg:pb-10">
-                <h2>Does Your Child Struggle</h2>
+                <h2>{Heading1}</h2>
 
-                <h2 className="mt-1.5">to Improve Their SAT</h2>
-
-                <h2 className="mt-1.5">Score & Lack the Right</h2>
-
-                <h2 className="mt-1.5">Guidance?</h2>
+                <h2 className="mt-1.5">{Heading2}</h2>
               </div>
 
               <div className="text-lg sm:text-xl lg:text-[24px] font-normal text-justify text-[#3F3F3F] leading-relaxed">
-                As a parent, navigating the SAT prep journey can feel
-                overwhelming. With countless options & high stakes, finding the
-                right support is crucial. Give your child the advantage they
-                deserve.
+                {plainText}
               </div>
 
-              <div className="mt-8 sm:mt-8 md:mt-4">
+              <div className="mt-8 sm:mt-8">
                 <div className="flex space-x-4 items-start">
                   <Image
                     src={crossCheck}
@@ -38,8 +32,7 @@ const ChildStruggle = () => {
                     className="mt-1"
                   />
                   <div className="text-[#5D5D75] font-normal text-base lg:text-[18px]">
-                    Students aiming for higher SAT scores to increase their
-                    college <span>admission chances</span>
+                    {pointText}
                   </div>
                 </div>
                 <div className="flex space-x-4 items-start mt-4">
@@ -48,7 +41,7 @@ const ChildStruggle = () => {
                     width={17}
                     height={17}
                     alt="Tick Icon"
-                    className="mt-1"
+                    className="mt-0.5"
                   />
                   <div className="text-[#5D5D75] font-normal text-base lg:text-[18px]">
                     <span>High school students preparing for the SAT</span>{" "}
@@ -61,7 +54,7 @@ const ChildStruggle = () => {
                     width={17}
                     height={17}
                     alt="Tick Icon"
-                    className="mt-1"
+                    className="mt-0.5"
                   />
                   <div className="text-[#5D5D75] font-normal text-base lg:text-[18px]">
                     Students who want to get into the top 50 universities

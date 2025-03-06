@@ -35,7 +35,7 @@ const Adam = () => {
         
         {/* Text Content */}
         <div className='md:w-1/2'>
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-[#447EF7]
+          <h2 className="text-3xl font-bold bg-gradient-to-b from-[#447EF7]
            to-[#243DBC] text-transparent bg-clip-text md:text-4xl lg:text-5xl">Adam</h2>
           <p className="text-gray-700 text-sm md:text-base mt-2 md:mt-2 lg:text-lg">
             Becoming a Brand Ambassador gave me unique leadership experience and fulfilled my desire 
@@ -47,7 +47,7 @@ const Adam = () => {
       {/* Right Section */}
       <div className="w-full  md:w-2/5 lg:w-2/4 flex  lg:mb-4  flex-col items-start 
       text-left sm:text-center sm:items-center mt-10 md:mt-0 md:items-start md:text-left">
-        <h3 className="text-2xl font-bold bg-gradient-to-r from-[#447EF7] to-[#243DBC] 
+        <h3 className="text-2xl font-bold bg-gradient-to-b from-[#447EF7] to-[#243DBC] 
         text-transparent bg-clip-text lg:text-5xl lg:text-nowrap ">Join Your Squad Today!</h3>
         <p className="text-gray-700 text-sm md:text-base mt-2 md:mt-3 lg:text-lg">
           Become a Brand Ambassador and Start Making a Difference for Yourself and Your Peers.
