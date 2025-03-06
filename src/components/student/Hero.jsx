@@ -16,7 +16,7 @@ export default function Hero() {
         </p>
 
         <a
-          href="https://docs.google.com/spreadsheets/d/1sRCFFbL5Fimtnp-IgJI8EFmwonOgeGnjl-_VIzZePQE/edit?gid=2002908910#gid=2002908910"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfzizr7bT6rYy-X5KkEW6kCLnr51gAU3GydYeXlfppKsGnBWw/viewform"
           target='_blank'
           className="bg-white text-blue-500 font-semibold border
            border-blue-500 rounded-lg transition duration-300 ease-in-out 
