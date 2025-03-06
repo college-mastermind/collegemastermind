@@ -53,7 +53,7 @@ const Adam = () => {
           Become a Brand Ambassador and Start Making a Difference for Yourself and Your Peers.
         </p>
         <a
-        href="https://docs.google.com/spreadsheets/d/1sRCFFbL5Fimtnp-IgJI8EFmwonOgeGnjl-_VIzZePQE/edit?gid=2002908910#gid=2002908910"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfzizr7bT6rYy-X5KkEW6kCLnr51gAU3GydYeXlfppKsGnBWw/viewform"
           target='_blank'
         className="mt-4 bg-[#447EF7] hover:bg-[#243DBC] text-white font-semibold px-6 py-2 rounded-md shadow-md transition-all">
           Register Now
