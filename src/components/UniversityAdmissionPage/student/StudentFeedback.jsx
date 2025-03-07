@@ -4,7 +4,7 @@ import Image from "next/image";
 import adam from "@/app/assets/adam.png";
 import star from "@/app/assets/icons/star.svg";
 import cup from "@/app/assets/icons/cup.svg";
-import aarushPicture from "@/app/assets/aarushPicture.png"
+import mathewPicture from "@/app/assets/mathewPicture.png"
  
 const StudentFeedback = () => {
   return (
@@ -63,7 +63,7 @@ const StudentFeedback = () => {
       <div className="flex flex-col md:flex-row-reverse items-center mt-6 gap-3 md:gap-4 lg:gap-5 md:justify-start w-full">
         <div className="rounded-full overflow-hidden">
           <Image
-            src={aarushPicture}
+            src={mathewPicture}
             alt="Matthew"
             width={80}
             height={80}
