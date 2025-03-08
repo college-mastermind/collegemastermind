@@ -18,7 +18,7 @@ const SecondSection = () => {
               style={{
                 position: "relative",
                 borderRadius: "50%",
-                background: "#E4E2DF",
+                background: "white",
               }}
             >
               <div
@@ -56,7 +56,7 @@ const SecondSection = () => {
               style={{
                 position: "relative",
                 borderRadius: "50%",
-                background: "#E4E2DF",
+                background: "white",
               }}
             >
               <div
@@ -93,7 +93,7 @@ const SecondSection = () => {
               style={{
                 position: "relative",
                 borderRadius: "50%",
-                background: "#E4E2DF",
+                background: "white",
               }}
             >
               {/* Gradient Border Effect */}

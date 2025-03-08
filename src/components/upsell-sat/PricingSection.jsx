@@ -49,23 +49,23 @@ const PricingSection = () => {
   return (
     <>
       <div className="flex justify-center items-center flex-col mt-10 cursor-pointer mb-10 ">
-        <div className="text-[44px] font-semibold bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text">
+        <div className="text-center text-[30px] sm:text-[44px] font-semibold bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text">
           Select Your Upgrade{" "}
         </div>
         <div className="text-[24px] font-semibold">And Save!</div>
       </div>
-      <div className="w-full h-[434px] flex justify-center items-center flex-col sm:flex-row  space-x-8">
+      <div className="w-full h-auto lg:h-[434px] flex justify-center items-center flex-col lg:flex-row lg:space-x-8 space-y-4">
         {CardsData.map((e) => {
           return (
             <div
               key={e.id}
-              className="group relative flex flex-col justify-center items-center space-y-4 h-[434px] w-[80%] sm:w-[250px] md:w-[320px] lg:w-[390px] px-10 rounded-md shadow-[0px_4px_24px_4px_rgba(82,119,255,0.2)] cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105 hover:border-4 hover:border-[#447EF7]"
+              className="group relative flex flex-col justify-center items-center space-y-4 h-[434px] w-[300px] sm:w-[400px] lg:w-[390px] px-10 rounded-md shadow-[0px_4px_24px_4px_rgba(82,119,255,0.2)] cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105 hover:border-4 hover:border-[#447EF7]"
               onClick={() => {
                 setPricingOption(e.id);
                 priceHandling(e.id);
               }}
             >
-              <label className="mr-[310px] mt-2 mb-[-20px]">
+              <label className="mr-[210px] sm:mr-[260px] lg:mr-[310px]  mt-2 mb-[-8px] sm:mb-[-12px] lg:mb-[-20px]">
                 <input
                   type="radio"
                   name="toggle"
@@ -86,18 +86,18 @@ const PricingSection = () => {
                 </p>
               </div>
 
-              <div className="font-bold text-[54px] bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text leading-tight">
+              <div className="font-bold text-[45px] sm:text-[54px] bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text leading-tight">
                 ${e.price}{" "}
                 <span className="font-bold text-[24px] bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text">
                   USD
                 </span>
               </div>
 
-              <div className="font-semibold text-[26px]">{e.heading}</div>
+              <div className="font-semibold text-[26px] text-center">{e.heading}</div>
 
               {/* 🛠 FIX: Place `group-hover` on a direct child */}
               <div
-                className="transition-all duration-300 ease-in-out flex justify-center items-center w-[400px] h-[46px] bg-[#CCE5F6] group-hover:ml-5"
+                className="transition-all duration-300 ease-in-out flex justify-center items-center  w-[300px] sm:w-[400px] md:w-[398px] lg:w-[400px] h-[46px] bg-[#CCE5F6] group-hover:ml-0 lg:group-hover:ml-5"
                 style={{
                   clipPath:
                     "polygon(90% 0%, 82% 54%, 90% 100%, 0 100%, 0% 50%, 0 0)",
@@ -118,7 +118,7 @@ const PricingSection = () => {
         })}
       </div>
 
-      <div className="flex justify-center items-center mt-10 cursor-pointer ">
+      <div className="flex justify-center items-center mt-16 cursor-pointer  mb-20 ">
         <div className="flex justify-center items-center w-[205px] h-[56px] bg-[#447EF7] font-medium text-[20px] text-white rounded shadow-[0px_4px_16px_0px_rgba(14,63,242,0.24),inset_0px_2px_5px_0px_rgba(236,242,255,0.3)]">
           Buy Now
         </div>

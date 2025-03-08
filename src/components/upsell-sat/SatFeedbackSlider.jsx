@@ -19,7 +19,7 @@ const SatFeedbackWithRange = ({feedbacks}) => {
   }, [isPaused]);
 
   return (
-    <div className="relative mt-7 md:mt-0 w-full h-full bg-white py-20 px-6 sm:px-12 md:px-0 flex flex-col items-start text-left max-w-screen-xl mx-auto"
+    <div className="relative mt-7 md:mt-0 w-full h-full bg-white py-20 px-6 sm:px-12 md:px-0 flex flex-col items-start text-left max-w-screen-xl mx-auto  mb-20"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onClick={() => setIsPaused(true)}>

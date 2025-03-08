@@ -1,10 +1,10 @@
 "use client"
 import React from 'react'
-import  HeroSection from "@/components/upsell/HeroSection";
-import PricingSection from "@/components/upsell/PricingSection";
-import  SecondSection from "@/components/upsell/SecondSection";
-import TimerSection  from "@/components/upsell/TimerSection";
-import  SatFeedbackSlider  from "@/components/upsell/SatFeedbackSlider";
+import HeroSection from "@/components/upsell-university/HeroSection";
+import PricingSection from "@/components/upsell-university/PricingSection";
+import SecondSection from "@/components/upsell-university/SecondSection";
+import TimerSection  from "@/components/upsell-university/TimerSection";
+import SatFeedbackSlider  from "@/components/upsell-university/SatFeedbackSlider";
 import ringLogo from "@/app/assets/ringLogo.png";
 
 const page = () => {

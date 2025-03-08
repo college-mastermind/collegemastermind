@@ -1,10 +1,10 @@
 "use client"
 import React from 'react'
-import  HeroSection from "@/components/upsell/HeroSection";
-import PricingSection from "@/components/upsell/PricingSection";
-import  SecondSection from "@/components/upsell/SecondSection";
-import TimerSection  from "@/components/upsell/TimerSection";
-import  SatFeedbackSlider  from "@/components/upsell/SatFeedbackSlider";
+import  HeroSection from "@/components/upsell-sat/HeroSection"
+import PricingSection from "@/components/upsell-sat/PricingSection";
+import  SecondSection from "@/components/upsell-sat/SecondSection";
+import TimerSection  from "@/components/upsell-sat/TimerSection";
+import  SatFeedbackSlider  from "@/components/upsell-sat/SatFeedbackSlider";
 import hiyuPicture from "@/app/assets/hiyuPicture.png";
 import ringLogo from "@/app/assets/ringLogo.png";
 
