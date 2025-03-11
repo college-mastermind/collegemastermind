@@ -6,7 +6,7 @@ const TopChoices = ({boldText, plainText}) => {
   return (
     <>
       <div>
-        <div className="flex flex-col w-full md:flex-row lg:px-14 xl:px-0 xl:gap-20 max-w-fit mx-auto ">
+        <div className="flex flex-col w-full sm:flex-row lg:px-14 xl:px-0 xl:gap-20 max-w-fit mx-auto ">
 
           <div className="w-full xl:mx-auto xl:max-w-[1000px] 2xl:max-w-[1200px]  flex flex-col items-center  justify-center xl:items-start z-10 px-4 sm:px-6 md:px-8  xl:px-0 py-12">
             <div className="max-w-[730px] lg:pb-5">

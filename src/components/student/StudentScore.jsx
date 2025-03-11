@@ -6,7 +6,7 @@ const StudentScore = ({boldText}) => {
   return (
     <>
       <div>
-        <div className="flex flex-col w-full md:flex-row lg:px-14 xl:px-0 xl:gap-20 max-w-fit mx-auto">
+        <div className="flex flex-col w-full sm:flex-row lg:px-14 xl:px-0 xl:gap-20 max-w-fit mx-auto">
           <div className="w-full xl:mx-auto xl:max-w-[1000px] 2xl:max-w-[1200px] flex flex-col items-center  justify-center xl:-mr-10 z-10 px-4 sm:px-6 md:px-8  xl:px-0 py-12">
             <div className="max-w-[730px] lg:pb-5">
               <div className="text-4xl sm:text-5xl lg:text-[58px] md:text-nowrap font-bold text-left text-[#5277FF] leading-tight pb-6 sm:pb-8 lg:pb-10">

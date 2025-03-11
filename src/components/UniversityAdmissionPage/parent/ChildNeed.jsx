@@ -1,9 +1,12 @@
-import React from "react";
+"use client"
+
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import zoom from "@/app/assets/zoom.png";
 import check from "@/app/assets/check.svg";
 
 const ChildNeeds = () => { 
+  const [pt, setPt] = useState(5);
   const ambassador = [
     `<b>Session 1</b> -  A deep dive into your child's values, personality, and your family's objectives.`,
     `<b>Done For You</b> -  A completely customized list of 25-30 reach, target, and safety universities.`,
@@ -15,6 +18,20 @@ const ChildNeeds = () => {
     "You can pick the colleges you will focus on and focus your efforts to make it happen",
     "The right list gives you leverage and options to negotiate merit scholarships",
   ];
+
+  const paddingTop = ()=>{
+    console.log(window.innerWidth)
+    setPt(window.innerWidth <= 1290 ? "5" : "10");
+  }
+
+  useEffect(()=>{
+    paddingTop();
+    window.addEventListener('resize', paddingTop);
+
+    return()=>{
+      window.removeEventListener('resize', paddingTop);
+    }
+  },[])
 
   return (
     <div
@@ -109,9 +126,9 @@ const ChildNeeds = () => {
 
             <div className=" w-full h-full md:px-3 lg:px-5 xl:px-0">
               <h2
-                className="text-lg my-auto  bg-gradient-to-r ring-2 ring-[#447EF7] shadow-sm shadow-[#447EF7] rounded-xl from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text  
+                className={`text-lg my-auto  bg-gradient-to-r ring-2 ring-[#447EF7] shadow-sm shadow-[#447EF7] rounded-xl from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text  
             w-full p-3 h-full font-black 
-            sm:text-center lg:pt-10 lg:text-2xl xl:pt-6"
+            sm:text-center lg:pt-${pt} lg:text-xl xl:pt-6`}
               >
                 Learn 
                 <span className="font-bold">{" "}YOUR{" "}</span> 

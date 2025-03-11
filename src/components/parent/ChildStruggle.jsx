@@ -9,7 +9,7 @@ const ChildStruggle = ({Heading1,Heading2,plainText,pointText}) => {
   return (
     <>
       <div>
-        <div className="flex flex-col mt-20  w-full md:flex-row-reverse lg:px-14 xl:px-0 xl:gap-20 max-w-fit mx-auto">
+        <div className="flex flex-col mt-20  w-full sm:flex-row-reverse lg:px-14 xl:px-0 xl:gap-20 max-w-fit mx-auto">
           <div className="w-full xl:mx-auto xl:max-w-[1000px] 2xl:max-w-[1200px] flex flex-col items-center  justify-center xl:-mr-10 z-10 px-4 sm:px-6 md:px-8  xl:px-0 py-12">
             <div className="max-w-[730px] lg:pb-5">
               <div className="text-3xl flex-col sm:text-3xl md:text-nowrap lg:text-5xl font-bold text-left text-[#5277FF] pb-6 sm:pb-8 lg:pb-10">
