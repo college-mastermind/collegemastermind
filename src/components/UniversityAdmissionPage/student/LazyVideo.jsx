@@ -13,7 +13,7 @@ const LazyVideo = () => {
           observer.disconnect(); 
         }
       },
-      { threshold: 0.5 } // Trigger when 50% of the video is visible
+      { threshold: 1 } // Trigger when 50% of the video is visible
     );
 
     if (videoRef.current) observer.observe(videoRef.current);
