@@ -21,7 +21,7 @@ const ChildNeeds = () => {
 
   const paddingTop = ()=>{
     console.log(window.innerWidth)
-    setPt(window.innerWidth <= 1290 ? 5 : 10);
+    setPt(window.innerWidth);
   }
 
   useEffect(()=>{
@@ -128,7 +128,7 @@ const ChildNeeds = () => {
               <h2
                 className={`text-lg my-auto  bg-gradient-to-r ring-2 ring-[#447EF7] shadow-sm shadow-[#447EF7] rounded-xl from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text  
             w-full p-3 h-full font-black 
-            sm:text-center lg:pt-${pt} lg:text-xl xl:pt-6`}
+            sm:text-center ${pt < 1290 ? "lg:pt-5" : "lg:pt-10"} lg:text-xl xl:pt-6`}
               >
                 Learn 
                 <span className="font-bold">{" "}YOUR{" "}</span> 
