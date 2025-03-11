@@ -21,7 +21,7 @@ const ChildNeeds = () => {
 
   const paddingTop = ()=>{
     console.log(window.innerWidth)
-    setPt(window.innerWidth <= 1290 ? "5" : "10");
+    setPt(window.innerWidth <= 1290 ? 5 : 10);
   }
 
   useEffect(()=>{
