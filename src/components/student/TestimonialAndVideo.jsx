@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import profilePic from "@/app/assets/adam.png";
 import star from "@/app/assets/icons/star.svg";
@@ -45,10 +45,25 @@ const TestimonialAndVideo = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { name, from, till, duration, image } = testimonials[currentIndex];
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-
-  const handlePlayButtonClick = () => {
-    setIsVideoLoaded(true); // Trigger lazy loading of the video
-  };
+    const videoRef = useRef(null);
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            setIsVideoLoaded(true); 
+            observer.disconnect(); 
+          }
+        },
+        { threshold: 0.5 } 
+      );
+  
+      if (videoRef.current) {
+        observer.observe(videoRef.current);
+      }
+  
+      return () => observer.disconnect();
+    }, []);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
@@ -158,9 +173,9 @@ const TestimonialAndVideo = () => {
             </Suspense>
           ) : (
             <div className="w-full h-full bg-gray-300 flex items-center justify-center">
-              <button
+              <button ref={videoRef}
                 className="bg-[#447EF7] ring-2 ring-white text-gray-100 flex justify-center items-center rounded-full w-12 h-12 text-2xl"
-                onClick={handlePlayButtonClick}
+                onClick={() => setIsVideoLoaded(true)}
               >
                 ▶
               </button>

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, Suspense } from "react";
+import React, { useState, useEffect, useRef, Suspense } from "react";
 import { motion } from "framer-motion";
 
 // Lazy load the video component
@@ -7,13 +7,28 @@ const LazyVideo = React.lazy(() => import("./LazyVideo"));
 
 const VideoAndText = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
- 
-  const handlePlayButtonClick = () => {
-    setIsVideoLoaded(true); // Trigger lazy loading of the video
-  }; 
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVideoLoaded(true); 
+          observer.disconnect(); 
+        }
+      },
+      { threshold: 0.5 } 
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <div className="relative mt-7 md:mt-0 w-full h-full py-20 px-4 sm:px-6  flex flex-col items-center text-center max-w-screen-xl mx-auto">
+    <div className="relative mt-7 md:mt-0 w-full h-full py-20 px-4 sm:px-6 flex flex-col items-center text-center max-w-screen-xl mx-auto">
       {/* Video and Text Section */}
       <div className="mt-12 rounded-lg p-3 h-full sm:p-4 md:p-5 lg:p-14 xl:p-20 bg-white shadow-lg md:flex justify-center items-center md:gap-10 max-w-full mx-auto">
         {/* Video */}
@@ -28,10 +43,13 @@ const VideoAndText = () => {
                 <LazyVideo />
               </Suspense>
             ) : (
-              <div className="w-full h-full bg-gray-300 flex items-center justify-center">
+              <div
+                className="w-full h-full bg-gray-300 flex items-center justify-center"
+                ref={videoRef}
+              >
                 <button
                   className="bg-[#447EF7] text-gray-100 flex justify-center items-center rounded-full w-12 h-12 text-2xl"
-                  onClick={handlePlayButtonClick}
+                  onClick={() => setIsVideoLoaded(true)}
                 >
                   ▶
                 </button>
