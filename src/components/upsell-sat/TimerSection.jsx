@@ -6,9 +6,15 @@ const MINUTES=0;
 const SECONDS=10;
 
 const TimerSection = ({SAT_Timer,setSAT_Timer}) => {
-  const [hours, setHours] = useState(() => parseInt(window.localStorage.getItem("hours")) || HOURS);
-  const [minutes, setMinutes] = useState(() => parseInt(window.localStorage.getItem("minutes")) || MINUTES);
-  const [seconds, setSeconds] = useState(() => parseInt(window.localStorage.getItem("seconds")) || SECONDS);
+  const [hours, setHours] = useState(null);
+    const [minutes, setMinutes] = useState(null);
+    const [seconds, setSeconds] = useState(null);
+
+   useEffect(() => {
+      setHours(parseInt(localStorage.getItem("hours")) || HOURS);
+      setMinutes(parseInt(localStorage.getItem("minutes")) || MINUTES);
+      setSeconds(parseInt(localStorage.getItem("seconds")) || SECONDS);
+    }, []);
 
   const handleTimerEnd = () => {
     console.log("Timer has ended! Perform any action here.");
