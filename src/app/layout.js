@@ -19,6 +19,11 @@ export default function RootLayout({ children }) {
         <Footer />
         <ToasterProvider />
         <Analytics />
+        <script
+          src="https://pushlapgrowth.com/affiliate-tracker.js"
+          data-affiliate data-program-id="b603c13e-8be9-4c4c-84a3-da42d3089fd2"
+          async>
+        </script>
       </body>
     </html>
   );

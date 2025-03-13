@@ -1,49 +1,93 @@
 "use client"
 import { useState } from "react";
 
-const PricingSection = () => {
+
+const calulateDiscountedPrice = (originalPrice, discountRate) => {
+  if (discountRate <= 0 || discountRate > 99) return originalPrice;
+  const discountedPrice = originalPrice - (originalPrice / 100 * discountRate)
+  return Math.floor(discountedPrice);
+}
+
+const PricingSection = ({ SAT_Timer }) => {
   const CardsData = [
     {
       id: 1,
       addOn: "Add-On",
-      price: "20",
       heading: "Recordings",
       ribbon: "Priceless",
       text: "Get the recordings of your free sessions so that you can go back to them again and again.",
       bg: "bg-[#CCE5F6]",
       textColor: "text-[#5277FF]",
+      originalPrice: 20,
+      discountRate: 0,
     },
     {
       id: 2,
-      addOn: "72% off",
-      price: "1450",
       heading: "35 Sessions",
       ribbon: "Save $2,050",
       text: "Get a FULL SAT course at a fraction of the cost.",
       bg: "bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent",
       textColor: "text-white",
+      originalPrice: 5250,
+      discountRate: SAT_Timer ? 35 : 72,
     },
     {
       id: 3,
-      addOn: "55% off",
-      price: "450",
       heading: "4 Test Anxiety Sessions",
       ribbon: "Save $550",
       text: "Get a FULL SAT course at a fraction of the cost.",
       bg: "bg-[#CCE5F6]",
       textColor: "text-[#5277FF]",
+      originalPrice: 1000,
+      discountRate: SAT_Timer ? 28 : 55,
     },
   ];
 
-  const [isHovered, setIsHovered] = useState(false);
+  const [selectedOptions, setSelectedOptions] = useState([]);
 
-  const [pricingOption, setPricingOption] = useState();
-
-  const priceHandling = (id) => {
-    console.log(id);
+  const toggleSelection = (id) => {
+    setSelectedOptions((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
   };
-  const optionHandling = (id) => {
-    return id === pricingOption;
+
+  const handleBuyNow = async () => {
+    if (selectedOptions.length === 0) {
+      alert("Please select at least one card.");
+    }
+    console.log("Selected Card IDs:", selectedOptions);
+
+    let pricesData = []
+
+    for (let i = 0; i < selectedOptions.length; i++) {
+      let obj = CardsData.find((e) => e.id === selectedOptions[i]);
+      pricesData.push({
+        ...obj, discountedPrice: calulateDiscountedPrice(originalPrice, discountRate)
+      })
+    }
+
+    console.log(pricesData)
+
+    console.log("window.affiliateId")
+    console.log(window.affiliateId)
+
+    try {
+      const res = await fetch("/api/sessions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          pricesData,
+          clientId: window.affiliateId,
+        }),
+      });
+
+      const session = await res.json();
+      console.log(session)
+      window.location.href = session.url;
+
+    } catch (error) {
+      console.log(error)
+    }
   };
 
   return (
@@ -59,41 +103,39 @@ const PricingSection = () => {
           return (
             <div
               key={e.id}
-              className="group relative flex flex-col justify-center items-center space-y-4 h-[434px] w-[300px] sm:w-[400px] lg:w-[390px] px-10 rounded-md shadow-[0px_4px_24px_4px_rgba(82,119,255,0.2)] cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105 hover:border-4 hover:border-[#447EF7]"
-              onClick={() => {
-                setPricingOption(e.id);
-                priceHandling(e.id);
-              }}
+              className={`group relative flex flex-col justify-center items-center ${e.id === 2 ? "space-y-[26px]" : "space-y-3"
+                } h-[434px] w-[310px] sm:w-[400px] lg:w-[390px] px-10 rounded-md shadow-[0px_4px_24px_4px_rgba(82,119,255,0.2)] cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105 hover:border-4 hover:border-[#447EF7]
+              }`}
+              onClick={() => toggleSelection(e.id)}
             >
-              <label className="mr-[210px] sm:mr-[260px] lg:mr-[310px]  mt-2 mb-[-8px] sm:mb-[-12px] lg:mb-[-20px]">
+              <label className="mr-[210px] sm:mr-[260px] lg:mr-[310px] mt-2 mb-[-8px] sm:mb-[-12px] lg:mb-[-20px]">
                 <input
                   type="radio"
-                  name="toggle"
                   value={e.id}
-                  checked={optionHandling(e.id)}
-                  onChange={() => {}}
+                  checked={selectedOptions.includes(e.id)}
+                  onChange={() => { }}
                   className="h-4 w-4 cursor-pointer"
                 />
               </label>
 
               <div
-                className={`h-[55px] w-[150px] sm:w-[155px] md:w-[160px] lg:w-[166px] ${e.bg} flex justify-center items-center rounded`}
+                className={`h-[55px] w-[150px] sm:w-[155px] md:w-[160px] lg:w-[166px] ${e?.bg} flex justify-center items-center rounded`}
               >
                 <p
-                  className={`font-semibold text-[22px] sm:text-[24px] md:text-[28px] lg:text-[28px] ${e.textColor}`}
+                  className={`font-semibold text-[22px] sm:text-[24px] md:text-[28px] lg:text-[28px] ${e?.textColor}`}
                 >
-                  {e.addOn}
+                  {e.id === 1 ? "Add-On" : `${e?.discountRate}%`}
                 </p>
               </div>
 
               <div className="font-bold text-[45px] sm:text-[54px] bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text leading-tight">
-                ${e.price}{" "}
+                ${calulateDiscountedPrice(e.originalPrice, e.discountRate)}{" "}
                 <span className="font-bold text-[24px] bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text">
                   USD
                 </span>
               </div>
 
-              <div className="font-semibold text-[26px] text-center">{e.heading}</div>
+              <div className="font-semibold text-[26px] text-center">{e?.heading}</div>
 
               {/* 🛠 FIX: Place `group-hover` on a direct child */}
               <div
@@ -104,13 +146,13 @@ const PricingSection = () => {
                 }}
               >
                 <div className="text-center font-bold text-[24px] bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text">
-                  {e.ribbon}
+                  {e?.ribbon}
                 </div>
               </div>
 
               <div className="flex justify-center items-center h-[100px]">
                 <div className="font-semibold text-[19px] text-center">
-                  {e.text}
+                  {e?.text}
                 </div>
               </div>
             </div>
@@ -118,7 +160,7 @@ const PricingSection = () => {
         })}
       </div>
 
-      <div className="flex justify-center items-center mt-16 cursor-pointer  mb-20 ">
+      <div className="flex justify-center items-center mt-16 cursor-pointer  mb-20 " onClick={handleBuyNow}>
         <div className="flex justify-center items-center w-[205px] h-[56px] bg-[#447EF7] font-medium text-[20px] text-white rounded shadow-[0px_4px_16px_0px_rgba(14,63,242,0.24),inset_0px_2px_5px_0px_rgba(236,242,255,0.3)]">
           Buy Now
         </div>

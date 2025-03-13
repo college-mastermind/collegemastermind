@@ -35,6 +35,7 @@ const SecondSection = () => {
                 }}
               />
               <Image
+                alt=""
                 src={scholar_vector}
                 width={30}
                 height={20}
@@ -73,6 +74,7 @@ const SecondSection = () => {
                 }}
               />
               <Image
+                alt=""
                 src={stat_vector}
                 width={30}
                 height={20}
@@ -111,6 +113,7 @@ const SecondSection = () => {
                 }}
               />
               <Image
+                alt=""
                 src={brain_vector}
                 width={30}
                 height={20}

@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import  HeroSection from "@/components/upsell-sat/HeroSection"
 import PricingSection from "@/components/upsell-sat/PricingSection";
 import  SecondSection from "@/components/upsell-sat/SecondSection";
@@ -36,16 +36,26 @@ const page = () => {
     }
   ]
 
+  const [SAT_Timer,setSAT_Timer] = useState(false)
+ 
 
   return (
     <div>
       <HeroSection />
       <SecondSection />
-      <TimerSection />
-      <PricingSection />
+      <TimerSection SAT_Timer={SAT_Timer} setSAT_Timer={setSAT_Timer} />
+      <PricingSection SAT_Timer={SAT_Timer} />
       <SatFeedbackSlider feedbacks={feedbacks}/>
     </div>
   );
 }
 
 export default page;
+
+
+// 5250 3800
+// addon to 55%
+// add price if user select manys
+// half the discount if timers complete
+// calandly link
+

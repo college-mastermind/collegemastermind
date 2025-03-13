@@ -35,6 +35,7 @@ const SecondSection = () => {
             />
             <Image
               src={scholar_vector}
+              alt=""
               width={30}
               height={20}
               className=""
@@ -71,6 +72,7 @@ const SecondSection = () => {
               }}
             />
             <Image
+              alt=""
               src={stat_vector}
               width={30}
               height={20}
@@ -109,6 +111,7 @@ const SecondSection = () => {
               }}
             />
             <Image
+              alt=""
               src={brain_vector}
               width={30}
               height={20}
@@ -117,9 +120,7 @@ const SecondSection = () => {
           </div>
 
           <div className=" text-center font-normal text-[16px] sm:text-[18px] md:text-[20px] lg:text-[20px] mb-4 ">
-            Get the support and strategy you need to
-            reduce admissions confusion and stress,
-            and understand what actually works.
+          Get the right support to reduce admissions stress and understand what truly works for success.
           </div>
         </div>
       </div>
