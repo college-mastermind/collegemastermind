@@ -38,9 +38,9 @@ const page = () => {
         name: "Steve",
         from: null,
         till: null,
-        before: "Being from France, I felt completely out of my element when it came to ",
-        bold: "college masterminds.",
-        after: "We chose the top package, and it was a huge decision to invest in our child's future. Observing the remarkable growth and transformation in him made it a truly worthwhile endeavor.",
+        before: "Being from France, I felt completely out of my element when it came to college masterminds. ",
+        bold: "We chose the top package, and it was a huge decision to invest in our child's future. ",
+        after: "Observing the remarkable growth and transformation in him made it a truly worthwhile endeavor.",
         before2: null,
         bold2: "College Mastermind",
         after2: "didn't just prepare our son for college - they transformed his confidence, structure, and ability to face challenges head-on. We trusted them wholeheartedly, and they never let us down. Take the leap of faith; you won't be disappointed."

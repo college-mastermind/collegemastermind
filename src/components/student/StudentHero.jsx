@@ -4,15 +4,15 @@ import heroImage from "@/app/assets/hero.png";
 export default function StudentHero() {
   return (
     <div
-      className="relative w-full mb-16 h-[500px] sm:h-[550px] md:h-[640px] lg:h-[700px] flex items-center justify-center text-center bg-cover bg-center"
+      className="relative w-full mb-16 h-[500px] sm:h-[550px] md:h-[580px] flex items-center justify-center text-center bg-cover bg-center"
       style={{ backgroundImage: `url(${heroImage.src})` }}
     >
-      <div className="flex flex-col pt-5 items-center justify-center text-center lg:pt-7">
-        <h1 className="text-3xl sm:text-5xl sm:tracking-wide md:text-6xl lg:text-7xl font-bold mb-5 sm:mb-6 md:mb-8 lg:mb-12 text-white text-center ">
+      <div className="flex flex-col pt-5 items-center justify-center text-center lg:pt-14">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-5 sm:mb-6  text-white text-center ">
           Your First Step to <br />
           1500+ on the SAT
         </h1>
-        <p className="px-6  block text-[16px] leading-normal sm:text-[19px] md:text-[22px] lg:text-[28px] lg:font-normal text-white text-center mb-8 sm:mb-12 md:mb-16 lg:mb-16 text-lg">
+        <p className="px-6  block text-[16px] leading-normal sm:text-[19px] md:text-[22px] lg:text-[28px] lg:font-normal text-white text-center mb-8  text-lg">
           5 Free SAT Sessions to Jumpstart
           <br/>
           Your Path to 1500+

@@ -24,7 +24,7 @@ const AarushTestimonialVideo = () => {
   return (
     <video
       ref={videoRef}
-      className="w-full h-full object-cover rounded-md"
+      className="w-full h-[300px] object-cover rounded-md"
       src="/aarushTestimonial.mp4"
       controls
       playsInline

@@ -4,8 +4,8 @@ import TopChoices from '@/components/UniversityAdmissionPage/student/TopChoices'
 import ChooseUniversities from '@/components/UniversityAdmissionPage/student/ChooseUniversities'
 import StudentFeedback from '@/components/UniversityAdmissionPage/student/StudentFeedback'
 import VideoAndText from '@/components/UniversityAdmissionPage/student/VideoAndText'
-import StudentForm from '@/components/UniversityAdmissionPage/student/StudentForm'
 import ChildNeeds from '@/components/UniversityAdmissionPage/parent/ChildNeed'
+import ParentForm from '@/components/UniversityAdmissionPage/parent/ParentForm'
 
 
 export default function page() {
@@ -19,7 +19,7 @@ export default function page() {
       <ChooseUniversities lastText={lastText}/>
       <ChildNeeds />
       <StudentFeedback />
-      <StudentForm />
+      <ParentForm />
       <VideoAndText />
     </div>
   )
