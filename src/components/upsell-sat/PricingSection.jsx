@@ -76,14 +76,14 @@ const PricingSection = ({ SAT_Timer }) => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          pricesData,
-          clientId: window.affiliateId || "",
+          pricesData
+          // clientId: window.affiliateId || "",
         }),
       });
 
       const session = await res.json();
       console.log(session)
-      window.location.href = session.url;
+      // window.location.href = session.url;
  
     } catch (error) {
       console.log(error)
