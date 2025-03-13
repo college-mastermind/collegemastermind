@@ -8,7 +8,7 @@ import  SatFeedbackSlider  from "@/components/upsell-sat/SatFeedbackSlider";
 import hiyuPicture from "@/app/assets/hiyuPicture.png";
 import ringLogo from "@/app/assets/ringLogo.png";
 
-const page = () => {
+const Page = () => {
   const feedbacks = [
     {
       picture: hiyuPicture,
@@ -50,7 +50,7 @@ const page = () => {
   );
 }
 
-export default page;
+export default Page;
 
 
 // 5250 3800
