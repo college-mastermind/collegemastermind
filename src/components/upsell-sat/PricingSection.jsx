@@ -69,7 +69,7 @@ const PricingSection = ({ SAT_Timer }) => {
     console.log(pricesData)
 
     console.log("window.affiliateId")
-    console.log(window.affiliateId)
+    // console.log(window.affiliateId)
 
     try {
       const res = await fetch("/api/sessions", {
