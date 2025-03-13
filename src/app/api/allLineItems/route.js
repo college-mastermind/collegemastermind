@@ -1,11 +1,11 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { NextRequest, NextResponse } from "next/server";
+// import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
 
-export async function POST(req: NextRequest, res: NextResponse) {
+export async function POST(req, res) {
     try {
         const { sessionId } = await req.json();
 
