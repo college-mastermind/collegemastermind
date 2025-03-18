@@ -16,7 +16,7 @@ const NavBar = () => {
 
   return (
     <div
-      className={`hidden md:block w-full bg-[#ffffffa3] backdrop-blur fixed top-0 w-full z-50 border-b border-b-[#90bbfa99] ${
+      className={`hidden md:block w-full bg-[#ffffffa3] backdrop-blur fixed top-0 z-40 border-b border-b-[#90bbfa99] ${
         navbar ? "" : ""
       }`}
     >

@@ -1,13 +1,17 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import ConsultingForm from "./ConsultingForm";
 
 const LandingSectionNew = ({
   backgroundImage,
   heading,
   description,
-  buttonText,
-  buttonLink,
+  buttonText
 }) => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div className="h-[90vh] w-full relative flex">
       <Image
@@ -27,15 +31,22 @@ const LandingSectionNew = ({
           <p className="text-white text-xl md:text-2xl text-center md:text-left md:pr-20">
             {description}
           </p>
-          <Link
-            href={buttonLink}
-            target="_blank"
+          <button
+            // href={buttonLink}
+            // target="_blank"
+            onClick={()=>setShowModal(true)}
             className="mt-10 text-center bg-white rounded-lg shadow-lg text-blueSecondary py-2 px-10 font-semibold text-xl mr-auto ml-auto md:ml-0 border border-white hover:bg-transparent hover:text-white transitions duration-200"
           >
             {buttonText}
-          </Link>
+          </button>
         </div>
       </div>
+
+      {showModal && 
+      // <div className="absolute top-0 left-0 -translate-x-0 -translate-y-0">
+        <ConsultingForm setShowModal={setShowModal}/>
+        // </div>
+        }
     </div>
   );
 };

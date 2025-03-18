@@ -7,7 +7,6 @@ import HeadingTextPointsImage from "@/components/Common/HeadingTextPointsImage";
 import AdmissionSteps from "@/components/HomePage/AdmissionSteps";
 import ConfidenceSteps from "@/components/HomePage/ConfidenceSteps";
 import TheProcess from "@/components/HomePage/TheProcess";
-
 import LandingImage from "/public/graphics/homepage-landing.png";
 import GirlTensionImage from "/public/graphics/girl-tension.png";
 import GirlWithChecklistImage from "/public/graphics/girl-checklist.png";
@@ -21,7 +20,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="bg-[#f0f9fe] overflow-hidden flex flex-col">
+    <main className="bg-[#f0f9fe] overflow-hidden flex flex-col relative">
       <LandingSectionNew
         backgroundImage={LandingImage}
         heading={"Your Dream College Awaits"}
