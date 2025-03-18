@@ -2,23 +2,29 @@
 import React, { useState, useEffect } from "react";
 
 const HOURS = 1;
-const MINUTES = 1;
-const SECONDS = 0;
+const MINUTES = 0;
+const SECONDS = 1;
 
-const TimerSection = () => {
-  const [hours, setHours] = useState(null);
-  const [minutes, setMinutes] = useState(null);
-  const [seconds, setSeconds] = useState(null);
+const TimerSection = ({ SAT_Timer, setSAT_Timer }) => {
+  const [hours, setHours] = useState(HOURS); 
+  const [minutes, setMinutes] = useState(MINUTES); 
+  const [seconds, setSeconds] = useState(SECONDS); 
 
   useEffect(() => {
-    setHours(parseInt(localStorage.getItem("hours")) || HOURS);
-    setMinutes(parseInt(localStorage.getItem("minutes")) || MINUTES);
-    setSeconds(parseInt(localStorage.getItem("seconds")) || SECONDS);
-  }, []);
+    if (typeof window !== 'undefined') {
+      const storedHours = localStorage.getItem("hours");
+      const storedMinutes = localStorage.getItem("minutes");
+      const storedSeconds = localStorage.getItem("seconds");
+
+      setHours(storedHours ? parseInt(storedHours) : HOURS);
+      setMinutes(storedMinutes ? parseInt(storedMinutes) : MINUTES);
+      setSeconds(storedSeconds ? parseInt(storedSeconds) : SECONDS);
+    }
+  }, []); // Runs once on mount
 
   const handleTimerEnd = () => {
-    console.log("Timer has ended! Perform any action here.");
-    alert("Time is up!");
+    setSAT_Timer(true); 
+    alert("Time is up!"); // MODAL
   };
 
   useEffect(() => {

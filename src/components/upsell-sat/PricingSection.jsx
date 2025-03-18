@@ -1,6 +1,5 @@
 "use client"
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
 
 const calulateDiscountedPrice = (originalPrice, discountRate) => {
   if (discountRate <= 0 || discountRate > 99) return originalPrice;
@@ -43,33 +42,33 @@ const PricingSection = ({ SAT_Timer }) => {
     },
   ];
 
+  const [clientId, setClientId] = useState()
   const [selectedOptions, setSelectedOptions] = useState([]);
 
+
+  useEffect(() => {
+    setClientId(window.affiliateId)
+  },[])
   const toggleSelection = (id) => {
     setSelectedOptions((prev) =>
       prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
     );
   };
 
+
   const handleBuyNow = async () => {
     if (selectedOptions.length === 0) {
       alert("Please select at least one card.");
     }
-    console.log("Selected Card IDs:", selectedOptions);
 
     let pricesData = []
 
     for (let i = 0; i < selectedOptions.length; i++) {
       let obj = CardsData.find((e) => e.id === selectedOptions[i]);
       pricesData.push({
-        ...obj, discountedPrice: calulateDiscountedPrice(originalPrice, discountRate)
+        ...obj, discountedPrice: calulateDiscountedPrice(obj.originalPrice, obj.discountRate)
       })
     }
-
-    console.log(pricesData)
-
-    console.log("window.affiliateId")
-    // console.log(window.affiliateId)
 
     try {
       const res = await fetch("/api/sessions", {
@@ -82,11 +81,11 @@ const PricingSection = ({ SAT_Timer }) => {
       });
 
       const session = await res.json();
-      console.log(session)
-      // window.location.href = session.url;
- 
+      window.location.href = session.url;
+
     } catch (error) {
-      console.log(error)
+      console.log(error) // MODAL
+      alert(error.message)
     }
   };
 

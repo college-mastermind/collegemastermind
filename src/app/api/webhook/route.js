@@ -67,16 +67,3 @@ export async function POST(request) {
 }
 
 
-// Write a readme file 
-// - first cloen the repo
-// - npm install
-// - create stripe test acc and craete a wehook with name url/api/webhooks 
-// - select 
-// checkout.session.async_payment_failed
-// checkout.session.async_payment_succeeded
-// checkout.session.completed
-// checkout.session.expired
-//  events
-
-// -add pusblishable key private key and webhook key in env 
-// - then start using npm run dev
