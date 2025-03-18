@@ -19,10 +19,10 @@ export async function POST(req, res) {
         // console.log("*****************************Line Items*****************************");
 
 
-        const session = await stripe.checkout.sessions.retrieve(sessionId);
-        console.log("*****************************SESSION*****************************");
-        console.log(JSON.stringify(session,null,2))
-        console.log("*****************************SESSION*****************************");
+//         const session = await stripe.checkout.sessions.retrieve(sessionId);
+//         console.log("*****************************SESSION*****************************");
+//         console.log(JSON.stringify(session,null,2))
+//         console.log("*****************************SESSION*****************************");
 
 
         // const sessions = await stripe.checkout.sessions.list({ limit: 10 });

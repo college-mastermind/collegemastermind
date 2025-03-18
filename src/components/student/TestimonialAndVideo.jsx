@@ -76,7 +76,7 @@ const TestimonialAndVideo = () => {
   };
 
   return (
-    <div className="relative mt-7 w-full bg-white py-16 xl:py-20 xl:my-20 px-6 sm:px-12 md:px-16 flex flex-col md:flex-row items-center justify-between lg:justify-around  max-w-7xl xl:max-w-screen-xl mx-auto lg:px-20 xl:px-14">
+    <div className="relative mt-7 md:mt-5 w-full bg-white py-16 xl:py-20 xl:my-20 px-6 sm:px-12 md:px-16 flex flex-col md:flex-row items-center justify-between lg:justify-around  max-w-7xl xl:max-w-screen-xl mx-auto lg:px-20 xl:px-14">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <Image
@@ -119,7 +119,7 @@ const TestimonialAndVideo = () => {
           transition={{ duration: 0.8 }}
           className="flex flex-col items-center md:items-start gap-4"
         >
-          <div className="rounded-full overflow-hidden w-28 h-28 sm:w-40 sm:h-40 lg:w-44 lg:h-44 xl:w-48 xl:h-48">
+          <div className="rounded-full overflow-hidden w-28 h-28 sm:w-40 sm:h-40 xl:w-44 xl:h-44">
             <Image
               src={image}
               alt={name}
@@ -133,7 +133,7 @@ const TestimonialAndVideo = () => {
             <p className="text-gray-400 text-xl sm:text-2xl lg:text-5xl">
               <span className="font-extrabold text-gray-400">{from} </span>
               to <span className="font-extrabold text-[#447EF7]">{till}</span>
-              <br />
+              <br /> 
               in{" "}
               <span className="font-extrabold text-blue-700">{duration}</span>
             </p>
@@ -162,7 +162,7 @@ const TestimonialAndVideo = () => {
       {/* Right Side: Videos */}
       {/* Video */}
       <motion.div
-        className="w-full h-60 mt-14 md:mt-0 md:w-1/2 max-w-md flex justify-center ring-2 ring-[#447EF7] rounded-md relative overflow-hidden"
+        className="w-full mt-14 md:mt-0 md:w-1/2 max-w-lg flex justify-center ring-2 ring-[#447EF7] rounded-md relative overflow-hidden"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >

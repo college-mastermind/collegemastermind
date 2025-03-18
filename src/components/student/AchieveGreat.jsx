@@ -23,14 +23,14 @@ const AchieveGreat = () => {
     "Consistency",
   ];
 
-  return (
+  return (  
     <div
-      className="sm:bg-[#F0F9FE]  mt-10 md:mt-0 flex justify-center items-center sm:p-10 md:py-10 
-    md:px-4 lg:p-16 xl:px-28"
-    >
+      className="sm:bg-[#F0F9FE]  mt-4 md:mt-0 flex justify-center items-center sm:p-10 
+    md:px-4 lg:px-20 lg:pb-10 lg:pt-0 xl:px-28"
+    > 
       <div
         className="mx-auto  rounded-md bg-white flex flex-col justify-center 
-      items-center shadow-md sm:w-full sm:p-4 lg:p-12 max-w-screen-xl"
+      items-center shadow-md sm:w-full sm:p-4 lg:px-8 lg:py-12 max-w-screen-xl"
       >
         {/* Main Heading */}
         <div>

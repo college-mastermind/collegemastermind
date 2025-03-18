@@ -4,26 +4,27 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import star from "@/app/assets/icons/star.svg";
 import cup from "@/app/assets/icons/cup.svg";
+import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 
-
-const SatFeedbackWithRange = ({feedbacks}) => {
+const SatFeedbackWithRange = ({ feedbacks }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  useEffect(() => {
-    if (isPaused) return;
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % feedbacks.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [isPaused]);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % feedbacks.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + feedbacks.length) % feedbacks.length
+    );
+  };
 
   return (
-    <div className="relative mt-7 md:mt-0 w-full h-full bg-white py-20 px-6 sm:px-12 md:px-0 flex flex-col items-start text-left max-w-screen-xl mx-auto  mb-20"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onClick={() => setIsPaused(true)}>
-
+    <div
+      className="relative mt-7 md:mt-0 w-full h-full bg-white py-20 px-6 sm:px-12 md:px-0 flex flex-col items-start text-left max-w-screen-xl mx-auto  mb-20"
+    >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <Image
           src={cup}
@@ -58,9 +59,9 @@ const SatFeedbackWithRange = ({feedbacks}) => {
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -20 }}
           transition={{ duration: 0.5 }}
           className="flex flex-col items-start text-left w-full h-full max-w-6xl mx-auto"
         >
@@ -86,7 +87,9 @@ const SatFeedbackWithRange = ({feedbacks}) => {
                 </div>
 
                 <p className="text-gray-400 text-xl text-nowrap  sm:text-2xl lg:text-4xl block">
-                  <span className="font-extrabold text-gray-400">{feedbacks[currentIndex].from}</span>{" "}
+                  <span className="font-extrabold text-gray-400">
+                    {feedbacks[currentIndex].from}
+                  </span>{" "}
                   to{" "}
                   <span className="font-extrabold bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text">
                     {feedbacks[currentIndex].till}
@@ -97,16 +100,38 @@ const SatFeedbackWithRange = ({feedbacks}) => {
           </div>
           <p className="text-gray-700 text-sm md:text-base lg:text-2xl xl:text-3xl mt-5 md:mt-10 text-left">
             {feedbacks[currentIndex].before}{" "}
-            <strong className="font-extrabold bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text">{feedbacks[currentIndex].bold}</strong>{" "}
+            <strong className="font-extrabold bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text">
+              {feedbacks[currentIndex].bold}
+            </strong>{" "}
             {feedbacks[currentIndex].after}
           </p>
           <p className="text-gray-700 text-sm md:text-base lg:text-2xl xl:text-3xl mt-5 md:mt-10 text-left">
             {feedbacks[currentIndex].before2}{" "}
-            <strong className="font-extrabold bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text">{feedbacks[currentIndex].bold2}</strong>{" "}
+            <strong className="font-extrabold bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text">
+              {feedbacks[currentIndex].bold2}
+            </strong>{" "}
             {feedbacks[currentIndex].after2}
           </p>
         </motion.div>
       </AnimatePresence>
+      <div className=" mx-auto flex items-start xl:mr-32 gap-2 mt-8 md:mt-10">
+        <button onClick={handlePrev} className="md:text-2xl">
+          <GoChevronLeft />
+        </button>
+        <div className="mt-1 flex gap-2 md:gap-3">
+          {feedbacks.map((_, index) => (
+            <span
+              key={index}
+              className={`h-2 w-2 md:w-4 md:h-4 rounded-full ${
+                currentIndex === index ? "bg-blue-700" : "bg-gray-300"
+              }`}
+            ></span>
+          ))}
+        </div>
+        <button onClick={handleNext} className="md:text-2xl">
+          <GoChevronRight />
+        </button>
+      </div>
     </div>
   );
 };

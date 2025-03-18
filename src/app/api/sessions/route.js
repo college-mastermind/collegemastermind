@@ -1,6 +1,6 @@
-import Stripe from "stripe";
+// import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
+// const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
 const url = process.env.NEXT_ENV === 'dev'
   ? "http://localhost:8000"
@@ -25,11 +25,11 @@ export async function POST(req, res) {
       );
     }
 
-    // Create selected offers text and price
-    const finalHeading = pricesData
-      .map(item => item.heading)
-      .join(", ")
-      .replace(/, ([^,]*)$/, " & $1");
+//     // Create selected offers text and price
+//     const finalHeading = pricesData
+//       .map(item => item.heading)
+//       .join(", ")
+//       .replace(/, ([^,]*)$/, " & $1");
 
     const totalPrice = pricesData
       .reduce((sum, item) => sum + item.originalPrice, 0);

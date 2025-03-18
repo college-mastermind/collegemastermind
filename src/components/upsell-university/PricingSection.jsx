@@ -66,19 +66,19 @@ const PricingSection = ({ SAT_Timer }) => {
      if (selectedOptions.length === 0) {
        alert("Please select at least one card.");
      }
-     console.log("Selected Card IDs:", selectedOptions);
+
  
      let pricesData = []
  
      for (let i = 0; i < selectedOptions.length; i++) {
        let obj = CardsData.find((e) => e.id === selectedOptions[i]);
-       console.log(obj)
+
        pricesData.push({
          ...obj, discountedPrice: calulateDiscountedPrice(obj.originalPrice, obj.discountRate)
        })
      }
 
-     console.log(pricesData)
+  
  
      try {
        const res = await fetch("/api/sessions", {
@@ -94,7 +94,7 @@ const PricingSection = ({ SAT_Timer }) => {
        window.location.href = session.url;
  
      } catch (error) {
-       console.log(error)
+       console.log(error) // TODO: MODAL
      }
    };
   return (

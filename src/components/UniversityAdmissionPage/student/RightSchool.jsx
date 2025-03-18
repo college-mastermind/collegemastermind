@@ -19,7 +19,7 @@ const RightSchool = () => {
   return (
     <div
       className="sm:bg-[#F0F9FE]  mt-10 md:mt-0 flex justify-center items-center sm:p-10 md:py-10 
-  md:px-4 lg:p-16 xl:px-28"
+  md:px-4 lg:px-20 lg:py-10 xl:px-28"
     >
       <div
         className="mx-auto  rounded-md bg-white flex flex-col justify-center 
@@ -28,13 +28,13 @@ const RightSchool = () => {
         {/* Main Heading */}
         <div>
           <h1
-            className="text-2xl tracking-tight md:text-3xl md:tracking-normal px-3 
+            className="text-2xl tracking-tight md:text-3xl md:tracking-normal text-center
         font-bold  bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text lg:text-4xl"
           >
             The Right Schools Give
           </h1>
           <h1
-            className="text-2xl tracking-tight md:text-3xl md:tracking-normal pl-10 
+            className="text-2xl tracking-tight md:text-3xl md:tracking-normal text-center 
         font-bold  bg-gradient-to-b from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text lg:text-4xl"
           >
             You the Best Chances

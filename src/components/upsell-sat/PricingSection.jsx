@@ -60,7 +60,6 @@ const PricingSection = ({ SAT_Timer }) => {
     if (selectedOptions.length === 0) {
       alert("Please select at least one card.");
     }
-    console.log("Selected Card IDs:", selectedOptions);
 
     let pricesData = []
 
@@ -76,8 +75,8 @@ const PricingSection = ({ SAT_Timer }) => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          pricesData,
-          clientId: window.affiliateId,
+          pricesData
+          // clientId: window.affiliateId || "",
         }),
       });
 
@@ -85,7 +84,7 @@ const PricingSection = ({ SAT_Timer }) => {
       window.location.href = session.url;
 
     } catch (error) {
-      console.log(error)
+      console.log(error) // MODAL
       alert(error.message)
     }
   };

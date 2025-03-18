@@ -1,6 +1,6 @@
 import React from "react";
 
-const StudentForm = () => {
+const ParentForm = () => {
   return (
     <div className="flex flex-col items-center justify-center pt-8 md:pt-16 min-h-screen">
       {/* Heading Section */}
@@ -16,9 +16,9 @@ const StudentForm = () => {
       {/* Google Form Embed */}
       <div className="w-full max-w-3xl mt-6 md:mt-12 bg-gray-[#EAF2FF] sm:p-7 rounded-lg shadow-lg md:p-10">
         <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSe9_4A73xLvdkAMCQKo9mXX3yUYiUAu6uxnjsq6C-kPblLfCA/viewform?embedded=true"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSd83P58lLXaeZANsdzX1VER8Tg0ruKXKW9DS6IgFfAJYWjrIA/viewform?embedded=true"
           width="640"
-          height="3575"
+          height="2749"
           frameborder="0"
           marginheight="0"
           marginwidth="0"
@@ -31,4 +31,4 @@ const StudentForm = () => {
   );
 };
 
-export default StudentForm;
+export default ParentForm;
