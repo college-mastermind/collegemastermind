@@ -1,8 +1,13 @@
 "use client"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
+const calulateDiscountedPrice = (originalPrice, discountRate) => {
+  if (discountRate <= 0 || discountRate > 99) return originalPrice;
+  const discountedPrice = originalPrice - (originalPrice / 100 * discountRate)
+  return Math.floor(discountedPrice);
+}
 
-const PricingSection = () => {
+const PricingSection = ({ SAT_Timer }) => {
   const CardsData = [
     {
       id: 1,
@@ -12,7 +17,9 @@ const PricingSection = () => {
       ribbon: "Save $550",
       text: `Get the recordings of your free sessions AND approach applications with a specific plan and strategy to increase chances of acceptance.`,
       bg: "bg-[#CCE5F6]",
-      textColor: "text-[#5277FF]"
+      textColor: "text-[#5277FF]",
+      originalPrice: 1000,
+       discountRate: SAT_Timer ? 28 : 55,
     },
     {
       id: 2,
@@ -22,7 +29,9 @@ const PricingSection = () => {
       ribbon: "Book a Call Now",
       text: "Full College Admissions Support at a discount. An expert will help you choose the right package.",
       bg: "bg-[#CCE5F6]",
-      textColor: "text-[#5277FF]"
+      textColor: "text-[#5277FF]",
+      originalPrice: 1000,
+       discountRate: SAT_Timer ? 28 : 55,
     },
     {
       id: 3,
@@ -32,26 +41,62 @@ const PricingSection = () => {
       ribbon: "Save $550",
       text: `Get the recordings of your free sessions, AND learn a way to increase a college’s interest in your application, even BEFORE applying.`,
       bg: "bg-[#CCE5F6]",
-      textColor: "text-[#5277FF]"
+      textColor: "text-[#5277FF]",
+      originalPrice: 1000,
+       discountRate: SAT_Timer ? 28 : 55,
     }
   ];
 
 
-  const [selectedOptions, setSelectedOptions] = useState([]);
+ const [clientId, setClientId] = useState()
+   const [selectedOptions, setSelectedOptions] = useState([]);
+ 
+ 
+   useEffect(() => {
+     setClientId(window.affiliateId)
+   },[])
+   const toggleSelection = (id) => {
+     setSelectedOptions((prev) =>
+       prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+     );
+   };
+ 
+ 
+   const handleBuyNow = async () => {
+     if (selectedOptions.length === 0) {
+       alert("Please select at least one card.");
+     }
+     console.log("Selected Card IDs:", selectedOptions);
+ 
+     let pricesData = []
+ 
+     for (let i = 0; i < selectedOptions.length; i++) {
+       let obj = CardsData.find((e) => e.id === selectedOptions[i]);
+       console.log(obj)
+       pricesData.push({
+         ...obj, discountedPrice: calulateDiscountedPrice(obj.originalPrice, obj.discountRate)
+       })
+     }
 
-  const toggleSelection = (id) => {
-    setSelectedOptions((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
-  };
-
-  const handleBuyNow = () => {
-    if (selectedOptions.length === 0) {
-      alert("Please select at least one card.");
-    }
-    console.log("Selected Card IDs:", selectedOptions);
-  };
-
+     console.log(pricesData)
+ 
+     try {
+       const res = await fetch("/api/sessions", {
+         method: "POST",
+         headers: { "Content-Type": "application/json" },
+         body: JSON.stringify({
+           pricesData,
+           clientId: window.affiliateId,
+         }),
+       });
+ 
+       const session = await res.json();
+       window.location.href = session.url;
+ 
+     } catch (error) {
+       console.log(error)
+     }
+   };
   return (
     <>
       <div className="flex justify-center items-center flex-col mt-10 cursor-pointer mb-10 ">
@@ -85,7 +130,7 @@ const PricingSection = () => {
                 <p
                   className={`font-semibold text-[22px] sm:text-[24px] md:text-[28px] lg:text-[28px] ${e.textColor}`}
                 >
-                  {e.addOn}
+                  {e?.discountRate}%
                 </p>
               </div>
 
@@ -95,7 +140,7 @@ const PricingSection = () => {
                   ? "text-white bg-gradient-to-b from-[#447EF7] to-[#243DBC]"
                   : "bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text"} 
                   `}  >
-                {e.price} <span className={`font-bold text-[24px] bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text`}  >{e.id === 2 ? "" : "USD"}</span>
+                ${calulateDiscountedPrice(e.originalPrice, e.discountRate)}{" "} <span className={`font-bold text-[24px] bg-gradient-to-r from-[#447EF7] to-[#243DBC] text-transparent bg-clip-text`}  >{e.id === 2 ? "" : "USD"}</span>
               </div>
 
               <div className="font-semibold text-[26px] text-center">{e.heading}</div>

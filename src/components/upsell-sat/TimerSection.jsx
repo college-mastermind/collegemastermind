@@ -1,62 +1,75 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 
-const HOURS=0;
-const MINUTES=0;
-const SECONDS=10;
+const HOURS=1;
+const MINUTES=1;
+const SECONDS=0;
 
 const TimerSection = ({SAT_Timer,setSAT_Timer}) => {
-  const [hours, setHours] = useState(() => parseInt(window.localStorage.getItem("hours")) || HOURS);
-  const [minutes, setMinutes] = useState(() => parseInt(window.localStorage.getItem("minutes")) || MINUTES);
-  const [seconds, setSeconds] = useState(() => parseInt(window.localStorage.getItem("seconds")) || SECONDS);
-
-  const handleTimerEnd = () => {
-    console.log("Timer has ended! Perform any action here.");
-    setSAT_Timer(true);
-  };
-
-  useEffect(() => {
-    if (hours === 0 && minutes === 0 && seconds === 0) {
-      handleTimerEnd();
-      return;
-    }
-
-    const interval = setInterval(() => {
-      setSeconds((prevSeconds) => {
-        let updatedSeconds = prevSeconds - 1;
-        let updatedMinutes = minutes;
-        let updatedHours = hours;
-
-        if (updatedSeconds < 0) {
-          updatedSeconds = 59;
-          updatedMinutes -= 1;
-
-          if (updatedMinutes < 0) {
-            updatedMinutes = 59;
-            updatedHours -= 1;
-
-            if (updatedHours < 0) {
-              clearInterval(interval);
-              updatedHours = 0;
-              updatedMinutes = 0;
-              updatedSeconds = 0;
-              handleTimerEnd(); 
-            }
-          }
+    const [hours, setHours] = useState(HOURS); 
+      const [minutes, setMinutes] = useState(MINUTES); 
+      const [seconds, setSeconds] = useState(SECONDS); 
+    
+      useEffect(() => {
+        if (typeof window !== 'undefined') {
+          const storedHours = localStorage.getItem("hours");
+          const storedMinutes = localStorage.getItem("minutes");
+          const storedSeconds = localStorage.getItem("seconds");
+    
+          setHours(storedHours ? parseInt(storedHours) : HOURS);
+          setMinutes(storedMinutes ? parseInt(storedMinutes) : MINUTES);
+          setSeconds(storedSeconds ? parseInt(storedSeconds) : SECONDS);
         }
-
-        setMinutes(updatedMinutes);
-        setHours(updatedHours);
-        localStorage.setItem("hours", updatedHours);
-        localStorage.setItem("minutes", updatedMinutes);
-        localStorage.setItem("seconds", updatedSeconds);
-
-        return updatedSeconds;
-      });
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [hours, minutes, seconds]); 
+      }, []); 
+    
+      const handleTimerEnd = () => {
+        console.log("Timer has ended! Perform any action here.");
+        setSAT_Timer(true);
+        alert("Time is up!");
+      };
+    
+      useEffect(() => {
+        if (hours === 0 && minutes === 0 && seconds === 0) {
+          handleTimerEnd();
+          return;
+        }
+    
+        const interval = setInterval(() => {
+          setSeconds((prevSeconds) => {
+            let updatedSeconds = prevSeconds - 1;
+            let updatedMinutes = minutes;
+            let updatedHours = hours;
+    
+            if (updatedSeconds < 0) {
+              updatedSeconds = 59;
+              updatedMinutes -= 1;
+    
+              if (updatedMinutes < 0) {
+                updatedMinutes = 59;
+                updatedHours -= 1;
+    
+                if (updatedHours < 0) {
+                  clearInterval(interval);
+                  updatedHours = 0;
+                  updatedMinutes = 0;
+                  updatedSeconds = 0;
+                  handleTimerEnd();
+                }
+              }
+            }
+    
+            setMinutes(updatedMinutes);
+            setHours(updatedHours);
+            localStorage.setItem("hours", updatedHours);
+            localStorage.setItem("minutes", updatedMinutes);
+            localStorage.setItem("seconds", updatedSeconds);
+    
+            return updatedSeconds;
+          });
+        }, 1000);
+    
+        return () => clearInterval(interval);
+      }, [hours, minutes, seconds]);
 
   return (
     <>

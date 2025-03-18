@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, {useState} from 'react'
 import HeroSection from "@/components/upsell-university/HeroSection";
 import PricingSection from "@/components/upsell-university/PricingSection";
 import SecondSection from "@/components/upsell-university/SecondSection";
@@ -7,7 +7,7 @@ import TimerSection  from "@/components/upsell-university/TimerSection";
 import SatFeedbackSlider  from "@/components/upsell-university/SatFeedbackSlider";
 import ringLogo from "@/app/assets/ringLogo.png";
 
-const page = () => {
+const Page = () => {
     const feedbacks = [
       {
         picture: ringLogo,
@@ -46,16 +46,16 @@ const page = () => {
         after2: "didn't just prepare our son for college - they transformed his confidence, structure, and ability to face challenges head-on. We trusted them wholeheartedly, and they never let us down. Take the leap of faith; you won't be disappointed."
       }
     ]
-
+    const [SAT_Timer,setSAT_Timer] = useState(false)
   return (
     <div>
       <HeroSection />
       <SecondSection />
-      <TimerSection />
-      <PricingSection />
+      <TimerSection SAT_Timer={SAT_Timer} setSAT_Timer={setSAT_Timer}/>
+      <PricingSection SAT_Timer={SAT_Timer} />
       <SatFeedbackSlider feedbacks={feedbacks}/>
     </div>
   );
 }
 
-export default page;
+export default Page;
