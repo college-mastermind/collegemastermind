@@ -63,7 +63,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="pt-10 pb-10 sm:pb-16 px-6 sm:px-12 rounded-2xl bg-white shadow-md">
+    <div className="pt-10 lg:mt-14 pb-10 sm:pb-16 px-6 sm:px-12 rounded-2xl bg-white shadow-md">
       <h2
         className={`${textGradient} text-2xl sm:text-3xl font-bold text-center`}
       >

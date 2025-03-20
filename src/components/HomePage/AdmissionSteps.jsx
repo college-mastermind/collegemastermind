@@ -13,7 +13,7 @@ const AdmissionSteps = () => {
       >
         Complete Support for Every Step of Your Admissions Journey
       </h2>
-      <div className="flex flex-col md:flex-row gap-8 md:gap-0 mt-8">
+      <div className="flex flex-col sm:flex-row gap-8 sm:gap-0 mt-8">
         <div className="w-full md:w-[33.33%] p-4">
           <div
             className={`${shadowMain} h-full bg-white rounded-xl px-4 pt-4 pb-8 flex flex-col gap-4`}

@@ -13,8 +13,8 @@ const ConfidenceSteps = () => {
       >
         Confidence Every Step of the Way
       </h2>
-      <div className="flex flex-col md:flex-row">
-        <div className="w-full md:w-[33.33%] p-6">
+      <div className="flex flex-col sm:flex-row">
+        <div className="w-full sm:w-[33.33%] p-6">
           <div
             className={`h-full blueToLightGradient rounded-[12px] flex p-[3px] ${shadowMain}`}
           >
@@ -22,21 +22,21 @@ const ConfidenceSteps = () => {
               <Image
                 src={FileIcon}
                 alt="file"
-                className="w-[60px] object-contain mx-auto md:mx-0"
+                className="w-[60px] object-contain mx-auto sm:mx-0"
               />
               <h3
-                className={`text-4xl font-semibold text-center md:text-left ${textGradient}`}
+                className={`text-4xl font-semibold text-center sm:text-left ${textGradient}`}
               >
                 Honest Advice
               </h3>
-              <p className="text-lg text-center md:text-left font-medium">
+              <p className="text-lg text-center sm:text-left font-medium">
                 We give you the honest feedback and actionable steps you need to
                 get accepted, not just what you want to hear.
               </p>
             </div>
           </div>
         </div>
-        <div className="w-full md:w-[33.33%] p-6">
+        <div className="w-full sm:w-[33.33%] p-6">
           <div
             className={`h-full blueToLightGradient rounded-[12px] flex p-[3px] ${shadowMain}`}
           >
@@ -44,21 +44,21 @@ const ConfidenceSteps = () => {
               <Image
                 src={ArrowIcon}
                 alt="arrow"
-                className="w-[60px] object-contain mx-auto md:mx-0"
+                className="w-[60px] object-contain mx-auto sm:mx-0"
               />
               <h3
-                className={`text-4xl font-semibold text-center md:text-left ${textGradient}`}
+                className={`text-4xl font-semibold text-center sm:text-left ${textGradient}`}
               >
                 Clear Direction
               </h3>
-              <p className="text-lg text-center md:text-left font-medium">
+              <p className="text-lg text-center sm:text-left font-medium">
                 Our custom plan reduces disagreements and keeps everyone moving
                 in the same direction for smooth and continuous progress.
               </p>
             </div>
           </div>
         </div>
-        <div className="w-full md:w-[33.33%] p-6">
+        <div className="w-full sm:w-[33.33%] p-6">
           <div
             className={`h-full blueToLightGradient rounded-[12px] flex p-[3px] ${shadowMain}`}
           >
@@ -66,14 +66,14 @@ const ConfidenceSteps = () => {
               <Image
                 src={PeopleIcon}
                 alt="people"
-                className="w-[60px] object-contain mx-auto md:mx-0"
+                className="w-[60px] object-contain mx-auto sm:mx-0"
               />
               <h3
-                className={`text-4xl font-semibold text-center md:text-left ${textGradient}`}
+                className={`text-4xl font-semibold text-center sm:text-left ${textGradient}`}
               >
                 Only a Few Clients Each Year
               </h3>
-              <p className="text-lg text-center md:text-left font-medium">
+              <p className="text-lg text-center sm:text-left font-medium">
                 We work with a limited number of clients each year, ensuring
                 your child receives constant attention and results.
               </p>

@@ -43,7 +43,7 @@ const SingleExperienceBox = ({ id, title, description }) => {
   };
 
   return (
-    <div className="w-full md:w-[33.33%] p-4  ">
+    <div className="w-full sm:w-[33.33%] p-4  ">
       <div className="rounded-lg h-full shadow-[0px_2px_15px_-3px_#0000001A] py-4 px-6 flex flex-col gap-2 bg-white">
         <Image
           src={Class24Image}

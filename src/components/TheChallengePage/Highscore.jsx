@@ -4,7 +4,7 @@ import { textGradient } from "@/TailwindStyles/TailwindStyles";
 
 const HighScore = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-10 md:gap-0 items-center">
+    <div className="flex flex-col sm:flex-row gap-10 md:gap-0 items-center">
       <div className="w-full md:w-[40%] flex">
         <Image
           src={GirlHighScoreImage}
@@ -13,7 +13,7 @@ const HighScore = () => {
           className="w-full md:w-[90%] md:mr-auto "
         />
       </div>
-      <div className="w-full md:w-[60%] flex flex-col gap-2 text-center md:text-left">
+      <div className="w-full md:w-[60%] flex flex-col gap-2 text-center sm:text-left">
         <h2
           className={`${textGradient} text-4xl md:text-[42px] md:leading-[42px] pb-2 font-bold`}
         >

@@ -32,7 +32,7 @@ const UniversityAdmissionPage = () => {
       <div className="mt-8 max-w-[90%] w-[1440px] mx-auto overflow-hidden">
         <div className="pt-10 pb-10 flex w-full">
           <h2
-            className={`${textGradient} text-[40px] md:text-[48px] pb-4 font-bold text-center mx-auto leading-[42px] md:leading-[50px]`}
+            className={`${textGradient} text-[40px] md:text-[48px] pb-4 font-bold text-center mx-auto leading-[42px] sm:leading-[50px]`}
           >
             Everyone will think you “got lucky” when your acceptance pour in,
             but you&apos;ll know the truth!

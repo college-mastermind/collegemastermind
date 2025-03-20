@@ -4,10 +4,10 @@ import { textGradient } from "@/TailwindStyles/TailwindStyles";
 
 const BoringScienceStuff = () => {
   return (
-    <div className="py-10 flex flex-col-reverse md:flex-row gap-10 md:gap-0 items-center">
-      <div className="w-full md:w-[50%] flex flex-col gap-2 text-center md:text-left">
+    <div className="py-10 flex flex-col-reverse sm:flex-row gap-10 md:gap-0 items-center">
+      <div className="w-full md:w-[50%] flex flex-col gap-2 text-center sm:text-left">
         <h2
-          className={`${textGradient} text-4xl md:text-[44px] md:leading-[50px] pb-2 font-bold`}
+          className={`${textGradient} text-4xl sm:text-[44px] sm:leading-[50px] pb-2 font-bold`}
         >
           Boring Science Stuff
           <br /> (But Not Really!)

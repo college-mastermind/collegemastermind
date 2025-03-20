@@ -7,7 +7,7 @@ import Image3 from "/public/graphics/girl-happy.png";
 
 const SingleCard = ({ image, title, description }) => {
   return (
-    <div className="w-full md:w-[33.33%] p-4">
+    <div className="w-full sm:w-[33.33%] p-4">
       <div
         className={`h-full bg-white flex flex-col rounded-2xl ${shadowMain} p-4 pb-8`}
       >
