@@ -19,7 +19,7 @@ export default function HeroSection() {
         </p>
 
         <a
-          href="https://collegemastermind-ambassador.pushlapgrowth.com/"
+          href="https://forms.gle/jrn9QbbVEDzRg5bG9"
           target="_blank"
           className="bg-white text-blue-500 font-semibold border text-sm
            border-blue-500 rounded-lg transition duration-300 ease-in-out 
